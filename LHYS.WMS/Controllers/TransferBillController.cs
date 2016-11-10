@@ -47,9 +47,6 @@ namespace LHYS.WMS.Controllers
                 {
                     if (item.Id == Guid.Parse("00000000-0000-0000-0000-000000000000")) {
                         item.Id = Guid.NewGuid();
-
-
-
                     }
                 }
                 TransferBillService.AddEntity(bill);  
