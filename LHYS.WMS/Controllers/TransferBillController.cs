@@ -49,7 +49,8 @@ namespace LHYS.WMS.Controllers
                         item.Id = Guid.NewGuid();
                     }
                 }
-                TransferBillService.AddEntity(bill);
+                TransferBillService.AddEntity(bill);  
+                   
             }
             else
             {

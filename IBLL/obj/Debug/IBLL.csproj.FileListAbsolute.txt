@@ -10,3 +10,15 @@ C:\Users\Administrator\Desktop\LHYS.WMS\IBLL\bin\Debug\zh-Hans\EntityFramework.r
 C:\Users\Administrator\Desktop\LHYS.WMS\IBLL\obj\Debug\IBLL.csprojResolveAssemblyReference.cache
 C:\Users\Administrator\Desktop\LHYS.WMS\IBLL\obj\Debug\IBLL.dll
 C:\Users\Administrator\Desktop\LHYS.WMS\IBLL\obj\Debug\IBLL.pdb
+F:\github\LHYS.WMS\wms\IBLL\bin\Debug\IBLL.dll
+F:\github\LHYS.WMS\wms\IBLL\bin\Debug\IBLL.pdb
+F:\github\LHYS.WMS\wms\IBLL\bin\Debug\DBModel.dll
+F:\github\LHYS.WMS\wms\IBLL\bin\Debug\IDAL.dll
+F:\github\LHYS.WMS\wms\IBLL\bin\Debug\EntityFramework.dll
+F:\github\LHYS.WMS\wms\IBLL\bin\Debug\DBModel.pdb
+F:\github\LHYS.WMS\wms\IBLL\bin\Debug\IDAL.pdb
+F:\github\LHYS.WMS\wms\IBLL\bin\Debug\EntityFramework.xml
+F:\github\LHYS.WMS\wms\IBLL\bin\Debug\zh-Hans\EntityFramework.resources.dll
+F:\github\LHYS.WMS\wms\IBLL\obj\Debug\IBLL.csprojResolveAssemblyReference.cache
+F:\github\LHYS.WMS\wms\IBLL\obj\Debug\IBLL.dll
+F:\github\LHYS.WMS\wms\IBLL\obj\Debug\IBLL.pdb

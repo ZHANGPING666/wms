@@ -14,3 +14,8 @@ C:\Users\Administrator\Desktop\LHYS.WMS\Common\bin\Debug\Common.dll
 C:\Users\Administrator\Desktop\LHYS.WMS\Common\bin\Debug\Common.pdb
 C:\Users\Administrator\Desktop\LHYS.WMS\Common\obj\Debug\Common.dll
 C:\Users\Administrator\Desktop\LHYS.WMS\Common\obj\Debug\Common.pdb
+F:\github\LHYS.WMS\wms\Common\bin\Debug\Common.dll
+F:\github\LHYS.WMS\wms\Common\bin\Debug\Common.pdb
+F:\github\LHYS.WMS\wms\Common\obj\Debug\Common.csprojResolveAssemblyReference.cache
+F:\github\LHYS.WMS\wms\Common\obj\Debug\Common.dll
+F:\github\LHYS.WMS\wms\Common\obj\Debug\Common.pdb
