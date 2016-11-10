@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<objects xmlns="http://www.springframework.net">
+  
+  <object type="LHYS.WMS.Controllers.HomeController,LHYS.WMS" singleton="false" >
+    <property name="MenuAService" ref="MenuAService" />
+  </object>
+  <object type="LHYS.WMS.Controllers.TransferBillController,LHYS.WMS" singleton="false" >
+    <property name="TransferBillService" ref="TransferBillService" />
+    <property name="RecordService" ref="RecordService" />
+  </object>
+  <object type="LHYS.WMS.Controllers.GoodItemController,LHYS.WMS" singleton="false" >
+    <property name="GoodItemService" ref="GoodItemService" />
+  </object>
+ 
+  
+</objects>
+

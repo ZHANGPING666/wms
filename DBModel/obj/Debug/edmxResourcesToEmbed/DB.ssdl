@@ -1,0 +1,461 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="DB.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2012" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityContainer Name="DBStoreContainer">
+    <EntitySet Name="TransferBill" EntityType="DB.Store.TransferBill" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="BackInput" EntityType="DB.Store.BackInput" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="OtherInput" EntityType="DB.Store.OtherInput" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="DIYBill" EntityType="DB.Store.DIYBill" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="LocationChange" EntityType="DB.Store.LocationChange" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="CheckBill" EntityType="DB.Store.CheckBill" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="GiveBill" EntityType="DB.Store.GiveBill" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="BackOutput" EntityType="DB.Store.BackOutput" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="OtherOutput" EntityType="DB.Store.OtherOutput" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Record" EntityType="DB.Store.Record" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="MenuA" EntityType="DB.Store.MenuA" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="MenuB" EntityType="DB.Store.MenuB" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="InWarehouse" EntityType="DB.Store.InWarehouse" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Location" EntityType="DB.Store.Location" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Warehouse" EntityType="DB.Store.Warehouse" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="TaskBill" EntityType="DB.Store.TaskBill" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="GoodItem" EntityType="DB.Store.GoodItem" store:Type="Tables" Schema="dbo" />
+    <AssociationSet Name="TransferBillRecord" Association="DB.Store.TransferBillRecord">
+      <End Role="TransferBill" EntitySet="TransferBill" />
+      <End Role="Record" EntitySet="Record" />
+    </AssociationSet>
+    <AssociationSet Name="BackInputRecord" Association="DB.Store.BackInputRecord">
+      <End Role="BackInput" EntitySet="BackInput" />
+      <End Role="Record" EntitySet="Record" />
+    </AssociationSet>
+    <AssociationSet Name="OtherInputRecord" Association="DB.Store.OtherInputRecord">
+      <End Role="OtherInput" EntitySet="OtherInput" />
+      <End Role="Record" EntitySet="Record" />
+    </AssociationSet>
+    <AssociationSet Name="DIYBillRecord" Association="DB.Store.DIYBillRecord">
+      <End Role="DIYBill" EntitySet="DIYBill" />
+      <End Role="Record" EntitySet="Record" />
+    </AssociationSet>
+    <AssociationSet Name="LocationChangeRecord" Association="DB.Store.LocationChangeRecord">
+      <End Role="LocationChange" EntitySet="LocationChange" />
+      <End Role="Record" EntitySet="Record" />
+    </AssociationSet>
+    <AssociationSet Name="CheckBillRecord" Association="DB.Store.CheckBillRecord">
+      <End Role="CheckBill" EntitySet="CheckBill" />
+      <End Role="Record" EntitySet="Record" />
+    </AssociationSet>
+    <AssociationSet Name="GiveBillRecord" Association="DB.Store.GiveBillRecord">
+      <End Role="GiveBill" EntitySet="GiveBill" />
+      <End Role="Record" EntitySet="Record" />
+    </AssociationSet>
+    <AssociationSet Name="BackOutputRecord" Association="DB.Store.BackOutputRecord">
+      <End Role="BackOutput" EntitySet="BackOutput" />
+      <End Role="Record" EntitySet="Record" />
+    </AssociationSet>
+    <AssociationSet Name="OtherOutputRecord" Association="DB.Store.OtherOutputRecord">
+      <End Role="OtherOutput" EntitySet="OtherOutput" />
+      <End Role="Record" EntitySet="Record" />
+    </AssociationSet>
+    <AssociationSet Name="MenuAMenuB" Association="DB.Store.MenuAMenuB">
+      <End Role="MenuA" EntitySet="MenuA" />
+      <End Role="MenuB" EntitySet="MenuB" />
+    </AssociationSet>
+    <AssociationSet Name="WarehouseLocation" Association="DB.Store.WarehouseLocation">
+      <End Role="Warehouse" EntitySet="Warehouse" />
+      <End Role="Location" EntitySet="Location" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="TransferBill">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="BillCode" Type="nvarchar" Nullable="true" MaxLength="50" />
+    <Property Name="CreateDate" Type="datetime" Nullable="true" />
+    <Property Name="ChargePerson" Type="nvarchar" Nullable="true" MaxLength="50" />
+    <Property Name="ExaminePerson" Type="nvarchar" Nullable="true" MaxLength="50" />
+    <Property Name="ExamineDate" Type="datetime" Nullable="true" />
+    <Property Name="MakePerson" Type="nvarchar" Nullable="true" MaxLength="50" />
+    <Property Name="Warehouse" Type="nvarchar" Nullable="true" MaxLength="100" />
+    <Property Name="InputType" Type="nvarchar" Nullable="true" MaxLength="100" />
+    <Property Name="BusinessType" Type="nvarchar" Nullable="true" MaxLength="100" />
+    <Property Name="Remark" Type="nvarchar" Nullable="true" MaxLength="1000" />
+    <Property Name="LBBillCode" Type="nvarchar" Nullable="true" MaxLength="100" />
+    <Property Name="LBBillDate" Type="datetime" Nullable="true" />
+    <Property Name="LBFrom" Type="nvarchar" Nullable="true" MaxLength="100" />
+    <Property Name="LBMoveType" Type="nvarchar" Nullable="true" MaxLength="100" />
+    <Property Name="LBRemark" Type="nvarchar" Nullable="true" MaxLength="500" />
+  </EntityType>
+  <EntityType Name="BackInput">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="BillCode" Type="nvarchar" Nullable="true" MaxLength="50" />
+    <Property Name="CreateDate" Type="datetime" Nullable="true" />
+    <Property Name="ChargePerson" Type="nvarchar" Nullable="true" MaxLength="50" />
+    <Property Name="ExaminePerson" Type="nvarchar" Nullable="true" MaxLength="50" />
+    <Property Name="ExamineDate" Type="datetime" Nullable="true" />
+    <Property Name="MakePerson" Type="nvarchar" Nullable="true" MaxLength="50" />
+    <Property Name="Warehouse" Type="nvarchar" Nullable="true" MaxLength="100" />
+    <Property Name="OutputType" Type="nvarchar" Nullable="true" MaxLength="100" />
+    <Property Name="BusinessType" Type="nvarchar" Nullable="true" MaxLength="100" />
+    <Property Name="Remark" Type="nvarchar" Nullable="true" MaxLength="1000" />
+    <Property Name="LBBillCode" Type="nvarchar" Nullable="true" MaxLength="100" />
+    <Property Name="LBBillDate" Type="datetime" Nullable="true" />
+    <Property Name="LBBackWarehouse" Type="nvarchar" Nullable="true" MaxLength="100" />
+    <Property Name="LBMoveType" Type="nvarchar" Nullable="true" MaxLength="100" />
+    <Property Name="LBRemark" Type="nvarchar" Nullable="true" MaxLength="500" />
+    <Property Name="LBBackAddress" Type="nvarchar" Nullable="true" MaxLength="500" />
+    <Property Name="LBContacts" Type="nvarchar" Nullable="true" MaxLength="100" />
+    <Property Name="LBPhone" Type="nvarchar" Nullable="true" MaxLength="100" />
+  </EntityType>
+  <EntityType Name="OtherInput">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="BillCode" Type="nvarchar" Nullable="true" MaxLength="50" />
+    <Property Name="CreateDate" Type="datetime" Nullable="true" />
+    <Property Name="ChargePerson" Type="nvarchar" Nullable="true" MaxLength="50" />
+    <Property Name="ExaminePerson" Type="nvarchar" Nullable="true" MaxLength="50" />
+    <Property Name="ExamineDate" Type="datetime" Nullable="true" />
+    <Property Name="MakePerson" Type="nvarchar" Nullable="true" MaxLength="50" />
+    <Property Name="Warehouse" Type="nvarchar" Nullable="true" MaxLength="100" />
+    <Property Name="InputType" Type="nvarchar" Nullable="true" MaxLength="100" />
+    <Property Name="BusinessType" Type="nvarchar" Nullable="true" MaxLength="100" />
+    <Property Name="Remark" Type="nvarchar" Nullable="true" MaxLength="1000" />
+  </EntityType>
+  <EntityType Name="DIYBill">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="BillCode" Type="nvarchar" Nullable="true" MaxLength="50" />
+    <Property Name="CreateDate" Type="datetime" Nullable="true" />
+    <Property Name="ChargePerson" Type="nvarchar" Nullable="true" MaxLength="50" />
+    <Property Name="ExaminePerson" Type="nvarchar" Nullable="true" MaxLength="50" />
+    <Property Name="ExamineDate" Type="datetime" Nullable="true" />
+    <Property Name="MakePerson" Type="nvarchar" Nullable="true" MaxLength="50" />
+    <Property Name="Remark" Type="nvarchar" Nullable="true" MaxLength="1000" />
+  </EntityType>
+  <EntityType Name="LocationChange">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="BillCode" Type="nvarchar" Nullable="true" MaxLength="50" />
+    <Property Name="CreateDate" Type="datetime" Nullable="true" />
+    <Property Name="ChargePerson" Type="nvarchar" Nullable="true" MaxLength="50" />
+    <Property Name="ExaminePerson" Type="nvarchar" Nullable="true" MaxLength="50" />
+    <Property Name="ExamineDate" Type="datetime" Nullable="true" />
+    <Property Name="MakePerson" Type="nvarchar" Nullable="true" MaxLength="50" />
+    <Property Name="Remark" Type="nvarchar" Nullable="true" MaxLength="1000" />
+  </EntityType>
+  <EntityType Name="CheckBill">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="BillCode" Type="nvarchar" Nullable="true" MaxLength="50" />
+    <Property Name="CreateDate" Type="datetime" Nullable="true" />
+    <Property Name="Warehouse" Type="nvarchar" Nullable="true" MaxLength="100" />
+    <Property Name="ChargePerson" Type="nvarchar" Nullable="true" MaxLength="50" />
+    <Property Name="ExaminePerson" Type="nvarchar" Nullable="true" MaxLength="50" />
+    <Property Name="ExamineDate" Type="datetime" Nullable="true" />
+    <Property Name="MakePerson" Type="nvarchar" Nullable="true" MaxLength="50" />
+    <Property Name="Remark" Type="nvarchar" Nullable="true" MaxLength="1000" />
+  </EntityType>
+  <EntityType Name="GiveBill">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="BillCode" Type="nvarchar" Nullable="true" MaxLength="50" />
+    <Property Name="CreateDate" Type="datetime" Nullable="true" />
+    <Property Name="ChargePerson" Type="nvarchar" Nullable="true" MaxLength="50" />
+    <Property Name="ExaminePerson" Type="nvarchar" Nullable="true" MaxLength="50" />
+    <Property Name="ExamineDate" Type="datetime" Nullable="true" />
+    <Property Name="MakePerson" Type="nvarchar" Nullable="true" MaxLength="50" />
+    <Property Name="Warehouse" Type="nvarchar" Nullable="true" MaxLength="100" />
+    <Property Name="OutputType" Type="nvarchar" Nullable="true" MaxLength="100" />
+    <Property Name="BusinessType" Type="nvarchar" Nullable="true" MaxLength="100" />
+    <Property Name="Remark" Type="nvarchar" Nullable="true" MaxLength="1000" />
+    <Property Name="LBBillCode" Type="nvarchar" Nullable="true" MaxLength="100" />
+    <Property Name="LBBillDate" Type="datetime" Nullable="true" />
+    <Property Name="LBTaskBillCode" Type="nvarchar" Nullable="true" MaxLength="100" />
+    <Property Name="LBLine" Type="nvarchar" Nullable="true" MaxLength="200" />
+    <Property Name="LBContacts" Type="nvarchar" Nullable="true" MaxLength="100" />
+    <Property Name="LBPhone" Type="nvarchar" Nullable="true" MaxLength="100" />
+    <Property Name="LBMailCode" Type="nvarchar" Nullable="true" MaxLength="100" />
+    <Property Name="LBCustomerCode" Type="nvarchar" Nullable="true" MaxLength="100" />
+    <Property Name="LBCustomerName" Type="nvarchar" Nullable="true" MaxLength="500" />
+    <Property Name="LBSendAddress" Type="nvarchar" Nullable="true" MaxLength="100" />
+    <Property Name="LBRemark" Type="nvarchar" Nullable="true" MaxLength="500" />
+  </EntityType>
+  <EntityType Name="BackOutput">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="BillCode" Type="nvarchar" Nullable="true" MaxLength="50" />
+    <Property Name="CreateDate" Type="datetime" Nullable="true" />
+    <Property Name="Warehouse" Type="nvarchar" Nullable="true" MaxLength="100" />
+    <Property Name="InputType" Type="nvarchar" Nullable="true" MaxLength="100" />
+    <Property Name="ChargePerson" Type="nvarchar" Nullable="true" MaxLength="50" />
+    <Property Name="ExaminePerson" Type="nvarchar" Nullable="true" MaxLength="50" />
+    <Property Name="ExamineDate" Type="datetime" Nullable="true" />
+    <Property Name="MakePerson" Type="nvarchar" Nullable="true" MaxLength="50" />
+    <Property Name="BusinessType" Type="nvarchar" Nullable="true" MaxLength="100" />
+    <Property Name="Remark" Type="nvarchar" Nullable="true" MaxLength="1000" />
+    <Property Name="LBBillCode" Type="nvarchar" Nullable="true" MaxLength="100" />
+    <Property Name="LBGiveBillCode" Type="nvarchar" Nullable="true" MaxLength="100" />
+    <Property Name="LBBillDate" Type="datetime" Nullable="true" />
+    <Property Name="LBCustomerCode" Type="nvarchar" Nullable="true" MaxLength="100" />
+    <Property Name="LBCustomerName" Type="nvarchar" Nullable="true" MaxLength="500" />
+    <Property Name="LBSendAddress" Type="nvarchar" Nullable="true" MaxLength="100" />
+    <Property Name="LBContacts" Type="nvarchar" Nullable="true" MaxLength="100" />
+    <Property Name="LBPhone" Type="nvarchar" Nullable="true" MaxLength="100" />
+    <Property Name="LBMailCode" Type="nvarchar" Nullable="true" MaxLength="100" />
+    <Property Name="LBReson" Type="nvarchar" Nullable="true" MaxLength="500" />
+    <Property Name="LBRemark" Type="nvarchar" Nullable="true" MaxLength="500" />
+  </EntityType>
+  <EntityType Name="OtherOutput">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="BillCode" Type="nvarchar" Nullable="true" MaxLength="50" />
+    <Property Name="CreateDate" Type="datetime" Nullable="true" />
+    <Property Name="Warehouse" Type="nvarchar" Nullable="true" MaxLength="100" />
+    <Property Name="OutputType" Type="nvarchar" Nullable="true" MaxLength="100" />
+    <Property Name="MakePerson" Type="nvarchar" Nullable="true" MaxLength="50" />
+    <Property Name="ExamineDate" Type="datetime" Nullable="true" />
+    <Property Name="ExaminePerson" Type="nvarchar" Nullable="true" MaxLength="50" />
+    <Property Name="ChargePerson" Type="nvarchar" Nullable="true" MaxLength="50" />
+    <Property Name="BusinessType" Type="nvarchar" Nullable="true" MaxLength="100" />
+    <Property Name="Remark" Type="nvarchar" Nullable="true" MaxLength="1000" />
+  </EntityType>
+  <EntityType Name="Record">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="MainTableId" Type="uniqueidentifier" Nullable="true" />
+    <Property Name="ItemCode" Type="nvarchar" Nullable="true" MaxLength="100" />
+    <Property Name="ItemLine" Type="nvarchar" Nullable="true" MaxLength="100" />
+    <Property Name="ItemName" Type="nvarchar" Nullable="true" MaxLength="100" />
+    <Property Name="ItemSpecifications" Type="nvarchar" Nullable="true" MaxLength="100" />
+    <Property Name="ItemLocation" Type="nvarchar" Nullable="true" MaxLength="100" />
+    <Property Name="ItemBatch" Type="nvarchar" Nullable="true" MaxLength="100" />
+    <Property Name="ItemUnit" Type="nvarchar" Nullable="true" MaxLength="100" />
+    <Property Name="Count" Type="float" Nullable="true" />
+    <Property Name="Weight" Type="float" Nullable="true" />
+    <Property Name="ReceiveCount" Type="float" Nullable="true" />
+    <Property Name="Remark" Type="nvarchar" Nullable="true" MaxLength="500" />
+  </EntityType>
+  <EntityType Name="MenuA">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Name" Type="nvarchar" Nullable="true" MaxLength="100" />
+    <Property Name="OrderNumber" Type="int" Nullable="true" />
+  </EntityType>
+  <EntityType Name="MenuB">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="MenuAId" Type="int" Nullable="false" />
+    <Property Name="Name" Type="nvarchar" Nullable="true" MaxLength="100" />
+    <Property Name="Url" Type="nvarchar" Nullable="true" MaxLength="500" />
+    <Property Name="OrderNumber" Type="int" Nullable="true" />
+  </EntityType>
+  <EntityType Name="InWarehouse">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="ItemCode" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="ItemLine" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="ItemName" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="ItemSpecifications" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="ItemLocation" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="ItemBatch" Type="nvarchar" Nullable="true" MaxLength="100" />
+    <Property Name="ItemUnit" Type="nvarchar" Nullable="true" MaxLength="100" />
+    <Property Name="Count" Type="float" Nullable="true" />
+  </EntityType>
+  <EntityType Name="Location">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="WarehouseId" Type="int" Nullable="false" />
+    <Property Name="Name" Type="nvarchar" Nullable="true" MaxLength="100" />
+    <Property Name="Remark" Type="nvarchar" Nullable="true" MaxLength="500" />
+  </EntityType>
+  <EntityType Name="Warehouse">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Name" Type="nvarchar" Nullable="true" MaxLength="100" />
+    <Property Name="Remark" Type="nvarchar" Nullable="true" MaxLength="500" />
+  </EntityType>
+  <EntityType Name="TaskBill">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="BillCode" Type="nvarchar" Nullable="true" MaxLength="50" />
+    <Property Name="CreateDate" Type="datetime" Nullable="true" />
+    <Property Name="MakePerson" Type="nvarchar" Nullable="true" MaxLength="50" />
+    <Property Name="ExamineDate" Type="datetime" Nullable="true" />
+    <Property Name="ExaminePerson" Type="nvarchar" Nullable="true" MaxLength="50" />
+    <Property Name="ChargePerson" Type="nvarchar" Nullable="true" MaxLength="50" />
+    <Property Name="Remark" Type="nvarchar" Nullable="true" MaxLength="1000" />
+  </EntityType>
+  <EntityType Name="GoodItem">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ItemCode" Type="nvarchar" Nullable="true" MaxLength="100" />
+    <Property Name="ItemLine" Type="nvarchar" Nullable="true" MaxLength="100" />
+    <Property Name="ItemName" Type="nvarchar" Nullable="true" MaxLength="100" />
+    <Property Name="ItemSpecifications" Type="nvarchar" Nullable="true" MaxLength="100" />
+    <Property Name="ItemLocation" Type="nvarchar" Nullable="true" MaxLength="100" />
+    <Property Name="ItemUnit" Type="nvarchar" Nullable="true" MaxLength="100" />
+  </EntityType>
+  <Association Name="TransferBillRecord">
+    <End Role="TransferBill" Type="DB.Store.TransferBill" Multiplicity="0..1" />
+    <End Role="Record" Type="DB.Store.Record" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TransferBill">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Record">
+        <PropertyRef Name="MainTableId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="BackInputRecord">
+    <End Role="BackInput" Type="DB.Store.BackInput" Multiplicity="0..1" />
+    <End Role="Record" Type="DB.Store.Record" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="BackInput">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Record">
+        <PropertyRef Name="MainTableId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="OtherInputRecord">
+    <End Role="OtherInput" Type="DB.Store.OtherInput" Multiplicity="0..1" />
+    <End Role="Record" Type="DB.Store.Record" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="OtherInput">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Record">
+        <PropertyRef Name="MainTableId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="DIYBillRecord">
+    <End Role="DIYBill" Type="DB.Store.DIYBill" Multiplicity="0..1" />
+    <End Role="Record" Type="DB.Store.Record" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="DIYBill">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Record">
+        <PropertyRef Name="MainTableId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="LocationChangeRecord">
+    <End Role="LocationChange" Type="DB.Store.LocationChange" Multiplicity="0..1" />
+    <End Role="Record" Type="DB.Store.Record" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="LocationChange">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Record">
+        <PropertyRef Name="MainTableId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="CheckBillRecord">
+    <End Role="CheckBill" Type="DB.Store.CheckBill" Multiplicity="0..1" />
+    <End Role="Record" Type="DB.Store.Record" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CheckBill">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Record">
+        <PropertyRef Name="MainTableId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="GiveBillRecord">
+    <End Role="GiveBill" Type="DB.Store.GiveBill" Multiplicity="0..1" />
+    <End Role="Record" Type="DB.Store.Record" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="GiveBill">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Record">
+        <PropertyRef Name="MainTableId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="BackOutputRecord">
+    <End Role="BackOutput" Type="DB.Store.BackOutput" Multiplicity="0..1" />
+    <End Role="Record" Type="DB.Store.Record" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="BackOutput">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Record">
+        <PropertyRef Name="MainTableId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="OtherOutputRecord">
+    <End Role="OtherOutput" Type="DB.Store.OtherOutput" Multiplicity="0..1" />
+    <End Role="Record" Type="DB.Store.Record" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="OtherOutput">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Record">
+        <PropertyRef Name="MainTableId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="MenuAMenuB">
+    <End Role="MenuA" Type="DB.Store.MenuA" Multiplicity="1" />
+    <End Role="MenuB" Type="DB.Store.MenuB" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="MenuA">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="MenuB">
+        <PropertyRef Name="MenuAId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="WarehouseLocation">
+    <End Role="Warehouse" Type="DB.Store.Warehouse" Multiplicity="1" />
+    <End Role="Location" Type="DB.Store.Location" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Warehouse">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Location">
+        <PropertyRef Name="WarehouseId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+</Schema>

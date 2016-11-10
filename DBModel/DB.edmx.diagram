@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="7ef3817115324ae4923496c985183d22" Name="Diagram1" ZoomLevel="82" >
+        <EntityTypeShape EntityType="DB.TransferBill" Width="1.5" PointX="0.5" PointY="0.5" IsExpanded="false" />
+        <EntityTypeShape EntityType="DB.BackInput" Width="1.5" PointX="11.875" PointY="0.5" IsExpanded="false" />
+        <EntityTypeShape EntityType="DB.OtherInput" Width="1.5" PointX="3.75" PointY="0.5" IsExpanded="false" />
+        <EntityTypeShape EntityType="DB.DIYBill" Width="1.5" PointX="5.375" PointY="0.5" IsExpanded="false" />
+        <EntityTypeShape EntityType="DB.LocationChange" Width="1.5" PointX="7" PointY="0.5" IsExpanded="false" />
+        <EntityTypeShape EntityType="DB.CheckBill" Width="1.5" PointX="8.625" PointY="0.5" IsExpanded="false" />
+        <EntityTypeShape EntityType="DB.GiveBill" Width="1.5" PointX="10.25" PointY="0.5" IsExpanded="false" />
+        <EntityTypeShape EntityType="DB.BackOutput" Width="1.5" PointX="2.125" PointY="0.5" IsExpanded="false" />
+        <EntityTypeShape EntityType="DB.OtherOutput" Width="1.5" PointX="13.5" PointY="0.5" IsExpanded="false" />
+        <EntityTypeShape EntityType="DB.Record" Width="1.5" PointX="3.75" PointY="3.125" IsExpanded="true" />
+        <AssociationConnector Association="DB.TransferBillRecord" />
+        <AssociationConnector Association="DB.BackInputRecord" />
+        <AssociationConnector Association="DB.OtherInputRecord" />
+        <AssociationConnector Association="DB.DIYBillRecord" />
+        <AssociationConnector Association="DB.LocationChangeRecord" />
+        <AssociationConnector Association="DB.CheckBillRecord" />
+        <AssociationConnector Association="DB.GiveBillRecord" />
+        <AssociationConnector Association="DB.BackOutputRecord" />
+        <AssociationConnector Association="DB.OtherOutputRecord" />
+        <EntityTypeShape EntityType="DB.MenuA" Width="1.5" PointX="1.375" PointY="4.875" IsExpanded="false" />
+        <EntityTypeShape EntityType="DB.MenuB" Width="1.5" PointX="1.375" PointY="6.625" IsExpanded="false" />
+        <AssociationConnector Association="DB.MenuAMenuB" />
+        <EntityTypeShape EntityType="DB.InWarehouse" Width="1.5" PointX="3.75" PointY="6.875" IsExpanded="false" />
+        <EntityTypeShape EntityType="DB.Location" Width="1.5" PointX="6.125" PointY="4" IsExpanded="false" />
+        <EntityTypeShape EntityType="DB.Warehouse" Width="1.5" PointX="6" PointY="5.375" IsExpanded="false" />
+        <AssociationConnector Association="DB.WarehouseLocation" />
+        <EntityTypeShape EntityType="DB.TaskBill" Width="1.5" PointX="8" PointY="4.75" IsExpanded="false" />
+        <EntityTypeShape EntityType="DB.GoodItem" Width="1.5" PointX="7.875" PointY="4.125" IsExpanded="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

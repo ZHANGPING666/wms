@@ -1,0 +1,1071 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="WMSModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="BackGoodsBill">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Guid" Nullable="false" />
+    <Property Name="BillCode" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="BillState" Type="Int32" Nullable="false" />
+    <Property Name="BillType" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="CreateDate" Type="Time" Nullable="false" Precision="7" />
+    <Property Name="Warehouse" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="ChargePerson" Type="Int32" />
+    <Property Name="MakePerson" Type="Int32" />
+    <Property Name="ExaminationPerson" Type="Int32" />
+    <Property Name="ExaminationDate" Type="DateTime" Precision="3" />
+    <Property Name="BusinessType" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="TotalCount" Type="Int32" Nullable="false" />
+    <Property Name="TotalWeight" Type="Int32" Nullable="false" />
+    <Property Name="Remark" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="LBCustomerCode" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="LBCustomerName" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="LBBackAddress" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="LBContacts" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="LBPhoneNumber" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="LBPostCode" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="LBOriginalCode" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="LBCode" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="LBApplicationDate" Type="DateTime" Precision="3" />
+    <Property Name="LBBackReason" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="LBRemark" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="Record" Relationship="Self.FK_BackGoodsBillRecord" FromRole="BackGoodsBill" ToRole="Record" />
+    <NavigationProperty Name="User" Relationship="Self.FK_UserBackGoodsBill" FromRole="BackGoodsBill" ToRole="User" />
+    <NavigationProperty Name="User1" Relationship="Self.FK_UserBackGoodsBill1" FromRole="BackGoodsBill" ToRole="User" />
+    <NavigationProperty Name="User2" Relationship="Self.FK_UserBackGoodsBill2" FromRole="BackGoodsBill" ToRole="User" />
+  </EntityType>
+  <EntityType Name="BackWarehouseBill">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Guid" Nullable="false" />
+    <Property Name="BillCode" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="BillState" Type="Int32" Nullable="false" />
+    <Property Name="BillType" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="CreateDate" Type="Time" Nullable="false" Precision="7" />
+    <Property Name="Warehouse" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="ChargePerson" Type="Int32" />
+    <Property Name="MakePerson" Type="Int32" />
+    <Property Name="ExaminationPerson" Type="Int32" />
+    <Property Name="ExaminationDate" Type="DateTime" Precision="3" />
+    <Property Name="BusinessType" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="TotalCount" Type="Int32" Nullable="false" />
+    <Property Name="TotalWeight" Type="Int32" Nullable="false" />
+    <Property Name="Remark" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="LBCode" Type="DateTime" Precision="3" />
+    <Property Name="LBDate" Type="DateTime" Precision="3" />
+    <Property Name="LBFrom" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="LBMoveType" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="LBRemark" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="LBBackAddress" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="LBContacts" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="LBPhoneNumber" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="Record" Relationship="Self.FK_BackWarehouseBillRecord" FromRole="BackWarehouseBill" ToRole="Record" />
+    <NavigationProperty Name="User" Relationship="Self.FK_UserBackWarehouseBill" FromRole="BackWarehouseBill" ToRole="User" />
+    <NavigationProperty Name="User1" Relationship="Self.FK_UserBackWarehouseBill1" FromRole="BackWarehouseBill" ToRole="User" />
+    <NavigationProperty Name="User2" Relationship="Self.FK_UserBackWarehouseBill2" FromRole="BackWarehouseBill" ToRole="User" />
+  </EntityType>
+  <EntityType Name="Bill">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Guid" Nullable="false" />
+    <Property Name="BillCode" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="BillState" Type="Int32" Nullable="false" />
+    <Property Name="BillType" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="CreateDate" Type="Time" Nullable="false" Precision="7" />
+    <Property Name="Warehouse" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="ChargePerson" Type="Int32" />
+    <Property Name="MakePerson" Type="Int32" />
+    <Property Name="ExaminationPerson" Type="Int32" />
+    <Property Name="ExaminationDate" Type="DateTime" Precision="3" />
+    <Property Name="BusinessType" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="TotalCount" Type="Int32" Nullable="false" />
+    <Property Name="TotalWeight" Type="Int32" Nullable="false" />
+    <Property Name="Remark" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="LBCode" Type="DateTime" Precision="3" />
+    <Property Name="LBDate" Type="DateTime" Precision="3" />
+    <Property Name="LBFrom" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="LBMoveType" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="LBRemark" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="Record" Relationship="Self.FK_TransferBillRecord" FromRole="Bill" ToRole="Record" />
+    <NavigationProperty Name="User" Relationship="Self.FK_UserTransferBill" FromRole="Bill" ToRole="User" />
+    <NavigationProperty Name="User1" Relationship="Self.FK_UserTransferBill1" FromRole="Bill" ToRole="User" />
+    <NavigationProperty Name="User2" Relationship="Self.FK_UserTransferBill2" FromRole="Bill" ToRole="User" />
+  </EntityType>
+  <EntityType Name="CheckBill">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Guid" Nullable="false" />
+    <Property Name="BillCode" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="CreateDate" Type="Time" Nullable="false" Precision="7" />
+    <Property Name="Warehouse" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="MakePerson" Type="Int32" />
+    <Property Name="ChargePerson" Type="Int32" />
+    <Property Name="ExaminationPerson" Type="Int32" />
+    <Property Name="ExaminationDate" Type="DateTime" Precision="3" />
+    <NavigationProperty Name="Record" Relationship="Self.FK_CheckBillRecord" FromRole="CheckBill" ToRole="Record" />
+    <NavigationProperty Name="User" Relationship="Self.FK_CheckBillUser" FromRole="CheckBill" ToRole="User" />
+    <NavigationProperty Name="User1" Relationship="Self.FK_CheckBillUser1" FromRole="CheckBill" ToRole="User" />
+    <NavigationProperty Name="User2" Relationship="Self.FK_UserCheckBill" FromRole="CheckBill" ToRole="User" />
+  </EntityType>
+  <EntityType Name="DIYBill">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Guid" Nullable="false" />
+    <Property Name="BillCode" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="BillState" Type="Int32" Nullable="false" />
+    <Property Name="BillType" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="CreateDate" Type="Time" Nullable="false" Precision="7" />
+    <Property Name="ChargePerson" Type="Int32" />
+    <Property Name="MakePerson" Type="Int32" />
+    <Property Name="ExaminationPerson" Type="Int32" />
+    <Property Name="ExaminationDate" Type="DateTime" Precision="3" />
+    <NavigationProperty Name="Record" Relationship="Self.FK_DIYBillRecord" FromRole="DIYBill" ToRole="Record" />
+    <NavigationProperty Name="User" Relationship="Self.FK_DIYBillUser" FromRole="DIYBill" ToRole="User" />
+    <NavigationProperty Name="User1" Relationship="Self.FK_UserDIYBill" FromRole="DIYBill" ToRole="User" />
+    <NavigationProperty Name="User2" Relationship="Self.FK_UserDIYBill1" FromRole="DIYBill" ToRole="User" />
+  </EntityType>
+  <EntityType Name="GiveGoodsBill">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Guid" Nullable="false" />
+    <Property Name="BillCode" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="BillState" Type="Int32" Nullable="false" />
+    <Property Name="BillType" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="TaskBillId" Type="Guid" Nullable="false" />
+    <Property Name="CreateDate" Type="Time" Nullable="false" Precision="7" />
+    <Property Name="Warehouse" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="ChargePerson" Type="Int32" />
+    <Property Name="MakePerson" Type="Int32" />
+    <Property Name="ExaminationPerson" Type="Int32" />
+    <Property Name="ExaminationDate" Type="DateTime" Precision="3" />
+    <Property Name="BusinessType" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="TotalCount" Type="Int32" Nullable="false" />
+    <Property Name="TotalWeight" Type="Int32" Nullable="false" />
+    <Property Name="Remark" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="LBCustomerCode" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="LBCustomerName" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="LBSendAddress" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="LBContacts" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="LBPhoneNumber" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="LBPostCode" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="LBWayLine" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="LBCode" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="LBTaskCode" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="LBGiveDate" Type="DateTime" Precision="3" />
+    <Property Name="LBRemark" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="Record" Relationship="Self.FK_GiveGoodsBillRecord" FromRole="GiveGoodsBill" ToRole="Record" />
+    <NavigationProperty Name="TaskBill" Relationship="Self.FK_TaskBillGiveGoodsBill" FromRole="GiveGoodsBill" ToRole="TaskBill" />
+    <NavigationProperty Name="User" Relationship="Self.FK_UserGiveGoodsBill" FromRole="GiveGoodsBill" ToRole="User" />
+    <NavigationProperty Name="User1" Relationship="Self.FK_UserGiveGoodsBill1" FromRole="GiveGoodsBill" ToRole="User" />
+    <NavigationProperty Name="User2" Relationship="Self.FK_UserGiveGoodsBill2" FromRole="GiveGoodsBill" ToRole="User" />
+  </EntityType>
+  <EntityType Name="GoodsLocation">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="WareHouseId" Type="Int32" Nullable="false" />
+    <Property Name="Name" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+    <NavigationProperty Name="Record" Relationship="Self.FK_GoodsLocationRecord" FromRole="GoodsLocation" ToRole="Record" />
+    <NavigationProperty Name="Warehouse" Relationship="Self.FK_WareHouseGoodsLocation" FromRole="GoodsLocation" ToRole="Warehouse" />
+  </EntityType>
+  <EntityType Name="Inwarehouse">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Guid" Nullable="false" />
+    <Property Name="MaterialCode" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Batch" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="LocationId" Type="Int32" />
+    <Property Name="Count" Type="Int32" Nullable="false" />
+    <Property Name="Weight" Type="Int32" />
+    <Property Name="InwareHouseState" Type="Int32" Nullable="false" />
+    <Property Name="InputDate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="OutputDate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="Remark" Type="String" MaxLength="500" FixedLength="false" Unicode="true" Nullable="false" />
+  </EntityType>
+  <EntityType Name="LocationChangeBill">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Guid" Nullable="false" />
+    <Property Name="BillCode" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="BillState" Type="Int32" Nullable="false" />
+    <Property Name="BillType" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="CreateDate" Type="Time" Nullable="false" Precision="7" />
+    <Property Name="Warehouse" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="ChargePerson" Type="Int32" />
+    <Property Name="MakePerson" Type="Int32" />
+    <Property Name="ExaminationPerson" Type="Int32" />
+    <Property Name="ExaminationDate" Type="DateTime" Precision="3" />
+    <Property Name="Remark" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="Record" Relationship="Self.FK_GoodsLocationChangeBillRecord" FromRole="LocationChangeBill" ToRole="Record" />
+    <NavigationProperty Name="User" Relationship="Self.FK_UserGoodsLocationChangeBill" FromRole="LocationChangeBill" ToRole="User" />
+    <NavigationProperty Name="User1" Relationship="Self.FK_UserGoodsLocationChangeBill1" FromRole="LocationChangeBill" ToRole="User" />
+    <NavigationProperty Name="User2" Relationship="Self.FK_UserGoodsLocationChangeBill2" FromRole="LocationChangeBill" ToRole="User" />
+  </EntityType>
+  <EntityType Name="MaterialFile">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Guid" Nullable="false" />
+    <Property Name="MaterialCode" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="MaterialClass" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="MaterialName" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="Specifications" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="MaterialUnit" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="Record" Relationship="Self.FK_RecordSetMaterialFile_" FromRole="MaterialFile" ToRole="Record" />
+  </EntityType>
+  <EntityType Name="MenuA">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="OrderNumber" Type="Int32" />
+    <Property Name="Url" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="MenuB" Relationship="Self.FK_MenuAMenuB" FromRole="MenuA" ToRole="MenuB" />
+  </EntityType>
+  <EntityType Name="MenuB">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="OrderNumber" Type="Int32" />
+    <Property Name="Url" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="MenuAId" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="MenuA" Relationship="Self.FK_MenuAMenuB" FromRole="MenuB" ToRole="MenuA" />
+  </EntityType>
+  <EntityType Name="OtherInputBill">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Guid" Nullable="false" />
+    <Property Name="BillCode" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="BillState" Type="Int32" Nullable="false" />
+    <Property Name="BillType" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="CreateDate" Type="Time" Nullable="false" Precision="7" />
+    <Property Name="Warehouse" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="ChargePerson" Type="Int32" />
+    <Property Name="MakePerson" Type="Int32" />
+    <Property Name="ExaminationPerson" Type="Int32" />
+    <Property Name="ExaminationDate" Type="DateTime" Precision="3" />
+    <Property Name="TotalCount" Type="Int32" Nullable="false" />
+    <Property Name="TotalWeight" Type="Int32" Nullable="false" />
+    <Property Name="Remark" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="Record" Relationship="Self.FK_OtherInputBillRecord" FromRole="OtherInputBill" ToRole="Record" />
+    <NavigationProperty Name="User" Relationship="Self.FK_UserOtherInputBill" FromRole="OtherInputBill" ToRole="User" />
+    <NavigationProperty Name="User1" Relationship="Self.FK_UserOtherInputBill1" FromRole="OtherInputBill" ToRole="User" />
+    <NavigationProperty Name="User2" Relationship="Self.FK_UserOtherInputBill2" FromRole="OtherInputBill" ToRole="User" />
+  </EntityType>
+  <EntityType Name="OtherOutputBill">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Guid" Nullable="false" />
+    <Property Name="BillCode" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="BillState" Type="Int32" Nullable="false" />
+    <Property Name="BillType" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="CreateDate" Type="Time" Nullable="false" Precision="7" />
+    <Property Name="Warehouse" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="ChargePerson" Type="Int32" />
+    <Property Name="MakePerson" Type="Int32" />
+    <Property Name="ExaminationPerson" Type="Int32" />
+    <Property Name="ExaminationDate" Type="DateTime" Precision="3" />
+    <Property Name="TotalCount" Type="Int32" Nullable="false" />
+    <Property Name="TotalWeight" Type="Int32" Nullable="false" />
+    <Property Name="Remark" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="Record" Relationship="Self.FK_OtherOutputBillRecord" FromRole="OtherOutputBill" ToRole="Record" />
+    <NavigationProperty Name="User" Relationship="Self.FK_UserOtherOutputBill" FromRole="OtherOutputBill" ToRole="User" />
+    <NavigationProperty Name="User1" Relationship="Self.FK_UserOtherOutputBill1" FromRole="OtherOutputBill" ToRole="User" />
+    <NavigationProperty Name="User2" Relationship="Self.FK_UserOtherOutputBill2" FromRole="OtherOutputBill" ToRole="User" />
+  </EntityType>
+  <EntityType Name="Record">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Guid" Nullable="false" />
+    <Property Name="MainTableId" Type="Guid" Nullable="false" />
+    <Property Name="GoodsLocationId" Type="Int32" Nullable="false" />
+    <Property Name="Batch" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Count" Type="Int32" Nullable="false" />
+    <Property Name="Weight" Type="Int32" Nullable="false" />
+    <Property Name="InOutState" Type="Int32" Nullable="false" />
+    <Property Name="OperationDate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="Remark" Type="String" MaxLength="500" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="UserId" Type="Int32" Nullable="false" />
+    <Property Name="OtherOutputBill_Id" Type="Guid" Nullable="false" />
+    <Property Name="MaterialFile" Type="Guid" Nullable="false" />
+    <NavigationProperty Name="BackGoodsBill" Relationship="Self.FK_BackGoodsBillRecord" FromRole="Record" ToRole="BackGoodsBill" />
+    <NavigationProperty Name="BackWarehouseBill" Relationship="Self.FK_BackWarehouseBillRecord" FromRole="Record" ToRole="BackWarehouseBill" />
+    <NavigationProperty Name="Bill" Relationship="Self.FK_TransferBillRecord" FromRole="Record" ToRole="Bill" />
+    <NavigationProperty Name="CheckBill" Relationship="Self.FK_CheckBillRecord" FromRole="Record" ToRole="CheckBill" />
+    <NavigationProperty Name="DIYBill" Relationship="Self.FK_DIYBillRecord" FromRole="Record" ToRole="DIYBill" />
+    <NavigationProperty Name="GiveGoodsBill" Relationship="Self.FK_GiveGoodsBillRecord" FromRole="Record" ToRole="GiveGoodsBill" />
+    <NavigationProperty Name="GoodsLocation" Relationship="Self.FK_GoodsLocationRecord" FromRole="Record" ToRole="GoodsLocation" />
+    <NavigationProperty Name="LocationChangeBill" Relationship="Self.FK_GoodsLocationChangeBillRecord" FromRole="Record" ToRole="LocationChangeBill" />
+    <NavigationProperty Name="MaterialFile1" Relationship="Self.FK_RecordSetMaterialFile_" FromRole="Record" ToRole="MaterialFile" />
+    <NavigationProperty Name="OtherInputBill" Relationship="Self.FK_OtherInputBillRecord" FromRole="Record" ToRole="OtherInputBill" />
+    <NavigationProperty Name="OtherOutputBill" Relationship="Self.FK_OtherOutputBillRecord" FromRole="Record" ToRole="OtherOutputBill" />
+    <NavigationProperty Name="User" Relationship="Self.FK_RecordUser" FromRole="Record" ToRole="User" />
+  </EntityType>
+  <EntityType Name="TaskBill">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Guid" Nullable="false" />
+    <Property Name="BillCode" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="CreateDate" Type="Time" Nullable="false" Precision="7" />
+    <Property Name="MakePerson" Type="Int32" />
+    <Property Name="ExaminationPerson" Type="Int32" />
+    <Property Name="ExaminationDate" Type="DateTime" Precision="3" />
+    <NavigationProperty Name="GiveGoodsBill" Relationship="Self.FK_TaskBillGiveGoodsBill" FromRole="TaskBill" ToRole="GiveGoodsBill" />
+  </EntityType>
+  <EntityType Name="User">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="WorkNumber" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="Name" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="UserName" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="Pwd" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="CompanyId" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="PostId" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="JobId" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="BackGoodsBill" Relationship="Self.FK_UserBackGoodsBill" FromRole="User" ToRole="BackGoodsBill" />
+    <NavigationProperty Name="BackGoodsBill1" Relationship="Self.FK_UserBackGoodsBill1" FromRole="User" ToRole="BackGoodsBill" />
+    <NavigationProperty Name="BackGoodsBill2" Relationship="Self.FK_UserBackGoodsBill2" FromRole="User" ToRole="BackGoodsBill" />
+    <NavigationProperty Name="BackWarehouseBill" Relationship="Self.FK_UserBackWarehouseBill" FromRole="User" ToRole="BackWarehouseBill" />
+    <NavigationProperty Name="BackWarehouseBill1" Relationship="Self.FK_UserBackWarehouseBill1" FromRole="User" ToRole="BackWarehouseBill" />
+    <NavigationProperty Name="BackWarehouseBill2" Relationship="Self.FK_UserBackWarehouseBill2" FromRole="User" ToRole="BackWarehouseBill" />
+    <NavigationProperty Name="Bill" Relationship="Self.FK_UserTransferBill" FromRole="User" ToRole="Bill" />
+    <NavigationProperty Name="Bill1" Relationship="Self.FK_UserTransferBill1" FromRole="User" ToRole="Bill" />
+    <NavigationProperty Name="Bill2" Relationship="Self.FK_UserTransferBill2" FromRole="User" ToRole="Bill" />
+    <NavigationProperty Name="CheckBill" Relationship="Self.FK_CheckBillUser" FromRole="User" ToRole="CheckBill" />
+    <NavigationProperty Name="CheckBill1" Relationship="Self.FK_CheckBillUser1" FromRole="User" ToRole="CheckBill" />
+    <NavigationProperty Name="CheckBill2" Relationship="Self.FK_UserCheckBill" FromRole="User" ToRole="CheckBill" />
+    <NavigationProperty Name="DIYBill" Relationship="Self.FK_DIYBillUser" FromRole="User" ToRole="DIYBill" />
+    <NavigationProperty Name="DIYBill1" Relationship="Self.FK_UserDIYBill" FromRole="User" ToRole="DIYBill" />
+    <NavigationProperty Name="DIYBill2" Relationship="Self.FK_UserDIYBill1" FromRole="User" ToRole="DIYBill" />
+    <NavigationProperty Name="GiveGoodsBill" Relationship="Self.FK_UserGiveGoodsBill" FromRole="User" ToRole="GiveGoodsBill" />
+    <NavigationProperty Name="GiveGoodsBill1" Relationship="Self.FK_UserGiveGoodsBill1" FromRole="User" ToRole="GiveGoodsBill" />
+    <NavigationProperty Name="GiveGoodsBill2" Relationship="Self.FK_UserGiveGoodsBill2" FromRole="User" ToRole="GiveGoodsBill" />
+    <NavigationProperty Name="LocationChangeBill" Relationship="Self.FK_UserGoodsLocationChangeBill" FromRole="User" ToRole="LocationChangeBill" />
+    <NavigationProperty Name="LocationChangeBill1" Relationship="Self.FK_UserGoodsLocationChangeBill1" FromRole="User" ToRole="LocationChangeBill" />
+    <NavigationProperty Name="LocationChangeBill2" Relationship="Self.FK_UserGoodsLocationChangeBill2" FromRole="User" ToRole="LocationChangeBill" />
+    <NavigationProperty Name="OtherInputBill" Relationship="Self.FK_UserOtherInputBill" FromRole="User" ToRole="OtherInputBill" />
+    <NavigationProperty Name="OtherInputBill1" Relationship="Self.FK_UserOtherInputBill1" FromRole="User" ToRole="OtherInputBill" />
+    <NavigationProperty Name="OtherInputBill2" Relationship="Self.FK_UserOtherInputBill2" FromRole="User" ToRole="OtherInputBill" />
+    <NavigationProperty Name="OtherOutputBill" Relationship="Self.FK_UserOtherOutputBill" FromRole="User" ToRole="OtherOutputBill" />
+    <NavigationProperty Name="OtherOutputBill1" Relationship="Self.FK_UserOtherOutputBill1" FromRole="User" ToRole="OtherOutputBill" />
+    <NavigationProperty Name="OtherOutputBill2" Relationship="Self.FK_UserOtherOutputBill2" FromRole="User" ToRole="OtherOutputBill" />
+    <NavigationProperty Name="Record" Relationship="Self.FK_RecordUser" FromRole="User" ToRole="Record" />
+  </EntityType>
+  <EntityType Name="Warehouse">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="GoodsLocation" Relationship="Self.FK_WareHouseGoodsLocation" FromRole="Warehouse" ToRole="GoodsLocation" />
+  </EntityType>
+  <Association Name="FK_BackGoodsBillRecord">
+    <End Role="BackGoodsBill" Type="Self.BackGoodsBill" Multiplicity="1" />
+    <End Role="Record" Type="Self.Record" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="BackGoodsBill">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Record">
+        <PropertyRef Name="MainTableId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_UserBackGoodsBill">
+    <End Role="User" Type="Self.User" Multiplicity="0..1" />
+    <End Role="BackGoodsBill" Type="Self.BackGoodsBill" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="User">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="BackGoodsBill">
+        <PropertyRef Name="ChargePerson" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_UserBackGoodsBill1">
+    <End Role="User" Type="Self.User" Multiplicity="0..1" />
+    <End Role="BackGoodsBill" Type="Self.BackGoodsBill" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="User">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="BackGoodsBill">
+        <PropertyRef Name="ExaminationPerson" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_UserBackGoodsBill2">
+    <End Role="User" Type="Self.User" Multiplicity="0..1" />
+    <End Role="BackGoodsBill" Type="Self.BackGoodsBill" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="User">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="BackGoodsBill">
+        <PropertyRef Name="MakePerson" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_BackWarehouseBillRecord">
+    <End Role="BackWarehouseBill" Type="Self.BackWarehouseBill" Multiplicity="1" />
+    <End Role="Record" Type="Self.Record" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="BackWarehouseBill">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Record">
+        <PropertyRef Name="MainTableId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_UserBackWarehouseBill">
+    <End Role="User" Type="Self.User" Multiplicity="0..1" />
+    <End Role="BackWarehouseBill" Type="Self.BackWarehouseBill" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="User">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="BackWarehouseBill">
+        <PropertyRef Name="ChargePerson" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_UserBackWarehouseBill1">
+    <End Role="User" Type="Self.User" Multiplicity="0..1" />
+    <End Role="BackWarehouseBill" Type="Self.BackWarehouseBill" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="User">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="BackWarehouseBill">
+        <PropertyRef Name="ExaminationPerson" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_UserBackWarehouseBill2">
+    <End Role="User" Type="Self.User" Multiplicity="0..1" />
+    <End Role="BackWarehouseBill" Type="Self.BackWarehouseBill" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="User">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="BackWarehouseBill">
+        <PropertyRef Name="MakePerson" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TransferBillRecord">
+    <End Role="Bill" Type="Self.Bill" Multiplicity="1" />
+    <End Role="Record" Type="Self.Record" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Bill">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Record">
+        <PropertyRef Name="MainTableId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_UserTransferBill">
+    <End Role="User" Type="Self.User" Multiplicity="0..1" />
+    <End Role="Bill" Type="Self.Bill" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="User">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Bill">
+        <PropertyRef Name="ChargePerson" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_UserTransferBill1">
+    <End Role="User" Type="Self.User" Multiplicity="0..1" />
+    <End Role="Bill" Type="Self.Bill" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="User">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Bill">
+        <PropertyRef Name="ExaminationPerson" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_UserTransferBill2">
+    <End Role="User" Type="Self.User" Multiplicity="0..1" />
+    <End Role="Bill" Type="Self.Bill" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="User">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Bill">
+        <PropertyRef Name="MakePerson" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_CheckBillRecord">
+    <End Role="CheckBill" Type="Self.CheckBill" Multiplicity="1" />
+    <End Role="Record" Type="Self.Record" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CheckBill">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Record">
+        <PropertyRef Name="MainTableId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_CheckBillUser">
+    <End Role="User" Type="Self.User" Multiplicity="0..1" />
+    <End Role="CheckBill" Type="Self.CheckBill" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="User">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="CheckBill">
+        <PropertyRef Name="ChargePerson" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_CheckBillUser1">
+    <End Role="User" Type="Self.User" Multiplicity="0..1" />
+    <End Role="CheckBill" Type="Self.CheckBill" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="User">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="CheckBill">
+        <PropertyRef Name="ExaminationPerson" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_UserCheckBill">
+    <End Role="User" Type="Self.User" Multiplicity="0..1" />
+    <End Role="CheckBill" Type="Self.CheckBill" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="User">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="CheckBill">
+        <PropertyRef Name="MakePerson" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_DIYBillRecord">
+    <End Role="DIYBill" Type="Self.DIYBill" Multiplicity="1" />
+    <End Role="Record" Type="Self.Record" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="DIYBill">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Record">
+        <PropertyRef Name="MainTableId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_DIYBillUser">
+    <End Role="User" Type="Self.User" Multiplicity="0..1" />
+    <End Role="DIYBill" Type="Self.DIYBill" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="User">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="DIYBill">
+        <PropertyRef Name="ChargePerson" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_UserDIYBill">
+    <End Role="User" Type="Self.User" Multiplicity="0..1" />
+    <End Role="DIYBill" Type="Self.DIYBill" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="User">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="DIYBill">
+        <PropertyRef Name="ExaminationPerson" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_UserDIYBill1">
+    <End Role="User" Type="Self.User" Multiplicity="0..1" />
+    <End Role="DIYBill" Type="Self.DIYBill" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="User">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="DIYBill">
+        <PropertyRef Name="MakePerson" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_GiveGoodsBillRecord">
+    <End Role="GiveGoodsBill" Type="Self.GiveGoodsBill" Multiplicity="1" />
+    <End Role="Record" Type="Self.Record" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="GiveGoodsBill">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Record">
+        <PropertyRef Name="MainTableId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TaskBillGiveGoodsBill">
+    <End Role="TaskBill" Type="Self.TaskBill" Multiplicity="1" />
+    <End Role="GiveGoodsBill" Type="Self.GiveGoodsBill" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TaskBill">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="GiveGoodsBill">
+        <PropertyRef Name="TaskBillId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_UserGiveGoodsBill">
+    <End Role="User" Type="Self.User" Multiplicity="0..1" />
+    <End Role="GiveGoodsBill" Type="Self.GiveGoodsBill" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="User">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="GiveGoodsBill">
+        <PropertyRef Name="ExaminationPerson" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_UserGiveGoodsBill1">
+    <End Role="User" Type="Self.User" Multiplicity="0..1" />
+    <End Role="GiveGoodsBill" Type="Self.GiveGoodsBill" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="User">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="GiveGoodsBill">
+        <PropertyRef Name="ChargePerson" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_UserGiveGoodsBill2">
+    <End Role="User" Type="Self.User" Multiplicity="0..1" />
+    <End Role="GiveGoodsBill" Type="Self.GiveGoodsBill" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="User">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="GiveGoodsBill">
+        <PropertyRef Name="MakePerson" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_GoodsLocationRecord">
+    <End Role="GoodsLocation" Type="Self.GoodsLocation" Multiplicity="1" />
+    <End Role="Record" Type="Self.Record" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="GoodsLocation">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Record">
+        <PropertyRef Name="GoodsLocationId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_WareHouseGoodsLocation">
+    <End Role="Warehouse" Type="Self.Warehouse" Multiplicity="1" />
+    <End Role="GoodsLocation" Type="Self.GoodsLocation" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Warehouse">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="GoodsLocation">
+        <PropertyRef Name="WareHouseId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_GoodsLocationChangeBillRecord">
+    <End Role="LocationChangeBill" Type="Self.LocationChangeBill" Multiplicity="1" />
+    <End Role="Record" Type="Self.Record" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="LocationChangeBill">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Record">
+        <PropertyRef Name="MainTableId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_UserGoodsLocationChangeBill">
+    <End Role="User" Type="Self.User" Multiplicity="0..1" />
+    <End Role="LocationChangeBill" Type="Self.LocationChangeBill" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="User">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="LocationChangeBill">
+        <PropertyRef Name="ChargePerson" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_UserGoodsLocationChangeBill1">
+    <End Role="User" Type="Self.User" Multiplicity="0..1" />
+    <End Role="LocationChangeBill" Type="Self.LocationChangeBill" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="User">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="LocationChangeBill">
+        <PropertyRef Name="ExaminationPerson" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_UserGoodsLocationChangeBill2">
+    <End Role="User" Type="Self.User" Multiplicity="0..1" />
+    <End Role="LocationChangeBill" Type="Self.LocationChangeBill" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="User">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="LocationChangeBill">
+        <PropertyRef Name="MakePerson" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_RecordSetMaterialFile_">
+    <End Role="MaterialFile" Type="Self.MaterialFile" Multiplicity="1" />
+    <End Role="Record" Type="Self.Record" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="MaterialFile">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Record">
+        <PropertyRef Name="MaterialFile" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_MenuAMenuB">
+    <End Role="MenuA" Type="Self.MenuA" Multiplicity="1" />
+    <End Role="MenuB" Type="Self.MenuB" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="MenuA">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="MenuB">
+        <PropertyRef Name="MenuAId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_OtherInputBillRecord">
+    <End Role="OtherInputBill" Type="Self.OtherInputBill" Multiplicity="1" />
+    <End Role="Record" Type="Self.Record" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="OtherInputBill">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Record">
+        <PropertyRef Name="MainTableId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_UserOtherInputBill">
+    <End Role="User" Type="Self.User" Multiplicity="0..1" />
+    <End Role="OtherInputBill" Type="Self.OtherInputBill" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="User">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="OtherInputBill">
+        <PropertyRef Name="ChargePerson" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_UserOtherInputBill1">
+    <End Role="User" Type="Self.User" Multiplicity="0..1" />
+    <End Role="OtherInputBill" Type="Self.OtherInputBill" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="User">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="OtherInputBill">
+        <PropertyRef Name="ExaminationPerson" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_UserOtherInputBill2">
+    <End Role="User" Type="Self.User" Multiplicity="0..1" />
+    <End Role="OtherInputBill" Type="Self.OtherInputBill" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="User">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="OtherInputBill">
+        <PropertyRef Name="MakePerson" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_OtherOutputBillRecord">
+    <End Role="OtherOutputBill" Type="Self.OtherOutputBill" Multiplicity="1" />
+    <End Role="Record" Type="Self.Record" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="OtherOutputBill">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Record">
+        <PropertyRef Name="OtherOutputBill_Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_UserOtherOutputBill">
+    <End Role="User" Type="Self.User" Multiplicity="0..1" />
+    <End Role="OtherOutputBill" Type="Self.OtherOutputBill" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="User">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="OtherOutputBill">
+        <PropertyRef Name="ChargePerson" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_UserOtherOutputBill1">
+    <End Role="User" Type="Self.User" Multiplicity="0..1" />
+    <End Role="OtherOutputBill" Type="Self.OtherOutputBill" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="User">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="OtherOutputBill">
+        <PropertyRef Name="ExaminationPerson" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_UserOtherOutputBill2">
+    <End Role="User" Type="Self.User" Multiplicity="0..1" />
+    <End Role="OtherOutputBill" Type="Self.OtherOutputBill" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="User">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="OtherOutputBill">
+        <PropertyRef Name="MakePerson" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_RecordUser">
+    <End Role="User" Type="Self.User" Multiplicity="1" />
+    <End Role="Record" Type="Self.Record" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="User">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Record">
+        <PropertyRef Name="UserId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="WMSEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="BackGoodsBill" EntityType="Self.BackGoodsBill" />
+    <EntitySet Name="BackWarehouseBill" EntityType="Self.BackWarehouseBill" />
+    <EntitySet Name="Bill" EntityType="Self.Bill" />
+    <EntitySet Name="CheckBill" EntityType="Self.CheckBill" />
+    <EntitySet Name="DIYBill" EntityType="Self.DIYBill" />
+    <EntitySet Name="GiveGoodsBill" EntityType="Self.GiveGoodsBill" />
+    <EntitySet Name="GoodsLocation" EntityType="Self.GoodsLocation" />
+    <EntitySet Name="Inwarehouse" EntityType="Self.Inwarehouse" />
+    <EntitySet Name="LocationChangeBill" EntityType="Self.LocationChangeBill" />
+    <EntitySet Name="MaterialFile" EntityType="Self.MaterialFile" />
+    <EntitySet Name="MenuA" EntityType="Self.MenuA" />
+    <EntitySet Name="MenuB" EntityType="Self.MenuB" />
+    <EntitySet Name="OtherInputBill" EntityType="Self.OtherInputBill" />
+    <EntitySet Name="OtherOutputBill" EntityType="Self.OtherOutputBill" />
+    <EntitySet Name="Record" EntityType="Self.Record" />
+    <EntitySet Name="TaskBill" EntityType="Self.TaskBill" />
+    <EntitySet Name="User" EntityType="Self.User" />
+    <EntitySet Name="Warehouse" EntityType="Self.Warehouse" />
+    <AssociationSet Name="FK_BackGoodsBillRecord" Association="Self.FK_BackGoodsBillRecord">
+      <End Role="BackGoodsBill" EntitySet="BackGoodsBill" />
+      <End Role="Record" EntitySet="Record" />
+    </AssociationSet>
+    <AssociationSet Name="FK_UserBackGoodsBill" Association="Self.FK_UserBackGoodsBill">
+      <End Role="User" EntitySet="User" />
+      <End Role="BackGoodsBill" EntitySet="BackGoodsBill" />
+    </AssociationSet>
+    <AssociationSet Name="FK_UserBackGoodsBill1" Association="Self.FK_UserBackGoodsBill1">
+      <End Role="User" EntitySet="User" />
+      <End Role="BackGoodsBill" EntitySet="BackGoodsBill" />
+    </AssociationSet>
+    <AssociationSet Name="FK_UserBackGoodsBill2" Association="Self.FK_UserBackGoodsBill2">
+      <End Role="User" EntitySet="User" />
+      <End Role="BackGoodsBill" EntitySet="BackGoodsBill" />
+    </AssociationSet>
+    <AssociationSet Name="FK_BackWarehouseBillRecord" Association="Self.FK_BackWarehouseBillRecord">
+      <End Role="BackWarehouseBill" EntitySet="BackWarehouseBill" />
+      <End Role="Record" EntitySet="Record" />
+    </AssociationSet>
+    <AssociationSet Name="FK_UserBackWarehouseBill" Association="Self.FK_UserBackWarehouseBill">
+      <End Role="User" EntitySet="User" />
+      <End Role="BackWarehouseBill" EntitySet="BackWarehouseBill" />
+    </AssociationSet>
+    <AssociationSet Name="FK_UserBackWarehouseBill1" Association="Self.FK_UserBackWarehouseBill1">
+      <End Role="User" EntitySet="User" />
+      <End Role="BackWarehouseBill" EntitySet="BackWarehouseBill" />
+    </AssociationSet>
+    <AssociationSet Name="FK_UserBackWarehouseBill2" Association="Self.FK_UserBackWarehouseBill2">
+      <End Role="User" EntitySet="User" />
+      <End Role="BackWarehouseBill" EntitySet="BackWarehouseBill" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TransferBillRecord" Association="Self.FK_TransferBillRecord">
+      <End Role="Bill" EntitySet="Bill" />
+      <End Role="Record" EntitySet="Record" />
+    </AssociationSet>
+    <AssociationSet Name="FK_UserTransferBill" Association="Self.FK_UserTransferBill">
+      <End Role="User" EntitySet="User" />
+      <End Role="Bill" EntitySet="Bill" />
+    </AssociationSet>
+    <AssociationSet Name="FK_UserTransferBill1" Association="Self.FK_UserTransferBill1">
+      <End Role="User" EntitySet="User" />
+      <End Role="Bill" EntitySet="Bill" />
+    </AssociationSet>
+    <AssociationSet Name="FK_UserTransferBill2" Association="Self.FK_UserTransferBill2">
+      <End Role="User" EntitySet="User" />
+      <End Role="Bill" EntitySet="Bill" />
+    </AssociationSet>
+    <AssociationSet Name="FK_CheckBillRecord" Association="Self.FK_CheckBillRecord">
+      <End Role="CheckBill" EntitySet="CheckBill" />
+      <End Role="Record" EntitySet="Record" />
+    </AssociationSet>
+    <AssociationSet Name="FK_CheckBillUser" Association="Self.FK_CheckBillUser">
+      <End Role="User" EntitySet="User" />
+      <End Role="CheckBill" EntitySet="CheckBill" />
+    </AssociationSet>
+    <AssociationSet Name="FK_CheckBillUser1" Association="Self.FK_CheckBillUser1">
+      <End Role="User" EntitySet="User" />
+      <End Role="CheckBill" EntitySet="CheckBill" />
+    </AssociationSet>
+    <AssociationSet Name="FK_UserCheckBill" Association="Self.FK_UserCheckBill">
+      <End Role="User" EntitySet="User" />
+      <End Role="CheckBill" EntitySet="CheckBill" />
+    </AssociationSet>
+    <AssociationSet Name="FK_DIYBillRecord" Association="Self.FK_DIYBillRecord">
+      <End Role="DIYBill" EntitySet="DIYBill" />
+      <End Role="Record" EntitySet="Record" />
+    </AssociationSet>
+    <AssociationSet Name="FK_DIYBillUser" Association="Self.FK_DIYBillUser">
+      <End Role="User" EntitySet="User" />
+      <End Role="DIYBill" EntitySet="DIYBill" />
+    </AssociationSet>
+    <AssociationSet Name="FK_UserDIYBill" Association="Self.FK_UserDIYBill">
+      <End Role="User" EntitySet="User" />
+      <End Role="DIYBill" EntitySet="DIYBill" />
+    </AssociationSet>
+    <AssociationSet Name="FK_UserDIYBill1" Association="Self.FK_UserDIYBill1">
+      <End Role="User" EntitySet="User" />
+      <End Role="DIYBill" EntitySet="DIYBill" />
+    </AssociationSet>
+    <AssociationSet Name="FK_GiveGoodsBillRecord" Association="Self.FK_GiveGoodsBillRecord">
+      <End Role="GiveGoodsBill" EntitySet="GiveGoodsBill" />
+      <End Role="Record" EntitySet="Record" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TaskBillGiveGoodsBill" Association="Self.FK_TaskBillGiveGoodsBill">
+      <End Role="TaskBill" EntitySet="TaskBill" />
+      <End Role="GiveGoodsBill" EntitySet="GiveGoodsBill" />
+    </AssociationSet>
+    <AssociationSet Name="FK_UserGiveGoodsBill" Association="Self.FK_UserGiveGoodsBill">
+      <End Role="User" EntitySet="User" />
+      <End Role="GiveGoodsBill" EntitySet="GiveGoodsBill" />
+    </AssociationSet>
+    <AssociationSet Name="FK_UserGiveGoodsBill1" Association="Self.FK_UserGiveGoodsBill1">
+      <End Role="User" EntitySet="User" />
+      <End Role="GiveGoodsBill" EntitySet="GiveGoodsBill" />
+    </AssociationSet>
+    <AssociationSet Name="FK_UserGiveGoodsBill2" Association="Self.FK_UserGiveGoodsBill2">
+      <End Role="User" EntitySet="User" />
+      <End Role="GiveGoodsBill" EntitySet="GiveGoodsBill" />
+    </AssociationSet>
+    <AssociationSet Name="FK_GoodsLocationRecord" Association="Self.FK_GoodsLocationRecord">
+      <End Role="GoodsLocation" EntitySet="GoodsLocation" />
+      <End Role="Record" EntitySet="Record" />
+    </AssociationSet>
+    <AssociationSet Name="FK_WareHouseGoodsLocation" Association="Self.FK_WareHouseGoodsLocation">
+      <End Role="Warehouse" EntitySet="Warehouse" />
+      <End Role="GoodsLocation" EntitySet="GoodsLocation" />
+    </AssociationSet>
+    <AssociationSet Name="FK_GoodsLocationChangeBillRecord" Association="Self.FK_GoodsLocationChangeBillRecord">
+      <End Role="LocationChangeBill" EntitySet="LocationChangeBill" />
+      <End Role="Record" EntitySet="Record" />
+    </AssociationSet>
+    <AssociationSet Name="FK_UserGoodsLocationChangeBill" Association="Self.FK_UserGoodsLocationChangeBill">
+      <End Role="User" EntitySet="User" />
+      <End Role="LocationChangeBill" EntitySet="LocationChangeBill" />
+    </AssociationSet>
+    <AssociationSet Name="FK_UserGoodsLocationChangeBill1" Association="Self.FK_UserGoodsLocationChangeBill1">
+      <End Role="User" EntitySet="User" />
+      <End Role="LocationChangeBill" EntitySet="LocationChangeBill" />
+    </AssociationSet>
+    <AssociationSet Name="FK_UserGoodsLocationChangeBill2" Association="Self.FK_UserGoodsLocationChangeBill2">
+      <End Role="User" EntitySet="User" />
+      <End Role="LocationChangeBill" EntitySet="LocationChangeBill" />
+    </AssociationSet>
+    <AssociationSet Name="FK_RecordSetMaterialFile_" Association="Self.FK_RecordSetMaterialFile_">
+      <End Role="MaterialFile" EntitySet="MaterialFile" />
+      <End Role="Record" EntitySet="Record" />
+    </AssociationSet>
+    <AssociationSet Name="FK_MenuAMenuB" Association="Self.FK_MenuAMenuB">
+      <End Role="MenuA" EntitySet="MenuA" />
+      <End Role="MenuB" EntitySet="MenuB" />
+    </AssociationSet>
+    <AssociationSet Name="FK_OtherInputBillRecord" Association="Self.FK_OtherInputBillRecord">
+      <End Role="OtherInputBill" EntitySet="OtherInputBill" />
+      <End Role="Record" EntitySet="Record" />
+    </AssociationSet>
+    <AssociationSet Name="FK_UserOtherInputBill" Association="Self.FK_UserOtherInputBill">
+      <End Role="User" EntitySet="User" />
+      <End Role="OtherInputBill" EntitySet="OtherInputBill" />
+    </AssociationSet>
+    <AssociationSet Name="FK_UserOtherInputBill1" Association="Self.FK_UserOtherInputBill1">
+      <End Role="User" EntitySet="User" />
+      <End Role="OtherInputBill" EntitySet="OtherInputBill" />
+    </AssociationSet>
+    <AssociationSet Name="FK_UserOtherInputBill2" Association="Self.FK_UserOtherInputBill2">
+      <End Role="User" EntitySet="User" />
+      <End Role="OtherInputBill" EntitySet="OtherInputBill" />
+    </AssociationSet>
+    <AssociationSet Name="FK_OtherOutputBillRecord" Association="Self.FK_OtherOutputBillRecord">
+      <End Role="OtherOutputBill" EntitySet="OtherOutputBill" />
+      <End Role="Record" EntitySet="Record" />
+    </AssociationSet>
+    <AssociationSet Name="FK_UserOtherOutputBill" Association="Self.FK_UserOtherOutputBill">
+      <End Role="User" EntitySet="User" />
+      <End Role="OtherOutputBill" EntitySet="OtherOutputBill" />
+    </AssociationSet>
+    <AssociationSet Name="FK_UserOtherOutputBill1" Association="Self.FK_UserOtherOutputBill1">
+      <End Role="User" EntitySet="User" />
+      <End Role="OtherOutputBill" EntitySet="OtherOutputBill" />
+    </AssociationSet>
+    <AssociationSet Name="FK_UserOtherOutputBill2" Association="Self.FK_UserOtherOutputBill2">
+      <End Role="User" EntitySet="User" />
+      <End Role="OtherOutputBill" EntitySet="OtherOutputBill" />
+    </AssociationSet>
+    <AssociationSet Name="FK_RecordUser" Association="Self.FK_RecordUser">
+      <End Role="User" EntitySet="User" />
+      <End Role="Record" EntitySet="Record" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

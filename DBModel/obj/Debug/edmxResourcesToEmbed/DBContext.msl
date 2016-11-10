@@ -1,0 +1,315 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="WMSModelStoreContainer" CdmEntityContainer="WMSEntities">
+    <EntitySetMapping Name="BackGoodsBill">
+      <EntityTypeMapping TypeName="WMSModel.BackGoodsBill">
+        <MappingFragment StoreEntitySet="BackGoodsBill">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="BillCode" ColumnName="BillCode" />
+          <ScalarProperty Name="BillState" ColumnName="BillState" />
+          <ScalarProperty Name="BillType" ColumnName="BillType" />
+          <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
+          <ScalarProperty Name="Warehouse" ColumnName="Warehouse" />
+          <ScalarProperty Name="ChargePerson" ColumnName="ChargePerson" />
+          <ScalarProperty Name="MakePerson" ColumnName="MakePerson" />
+          <ScalarProperty Name="ExaminationPerson" ColumnName="ExaminationPerson" />
+          <ScalarProperty Name="ExaminationDate" ColumnName="ExaminationDate" />
+          <ScalarProperty Name="BusinessType" ColumnName="BusinessType" />
+          <ScalarProperty Name="TotalCount" ColumnName="TotalCount" />
+          <ScalarProperty Name="TotalWeight" ColumnName="TotalWeight" />
+          <ScalarProperty Name="Remark" ColumnName="Remark" />
+          <ScalarProperty Name="LBCustomerCode" ColumnName="LBCustomerCode" />
+          <ScalarProperty Name="LBCustomerName" ColumnName="LBCustomerName" />
+          <ScalarProperty Name="LBBackAddress" ColumnName="LBBackAddress" />
+          <ScalarProperty Name="LBContacts" ColumnName="LBContacts" />
+          <ScalarProperty Name="LBPhoneNumber" ColumnName="LBPhoneNumber" />
+          <ScalarProperty Name="LBPostCode" ColumnName="LBPostCode" />
+          <ScalarProperty Name="LBOriginalCode" ColumnName="LBOriginalCode" />
+          <ScalarProperty Name="LBCode" ColumnName="LBCode" />
+          <ScalarProperty Name="LBApplicationDate" ColumnName="LBApplicationDate" />
+          <ScalarProperty Name="LBBackReason" ColumnName="LBBackReason" />
+          <ScalarProperty Name="LBRemark" ColumnName="LBRemark" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="BackWarehouseBill">
+      <EntityTypeMapping TypeName="WMSModel.BackWarehouseBill">
+        <MappingFragment StoreEntitySet="BackWarehouseBill">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="BillCode" ColumnName="BillCode" />
+          <ScalarProperty Name="BillState" ColumnName="BillState" />
+          <ScalarProperty Name="BillType" ColumnName="BillType" />
+          <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
+          <ScalarProperty Name="Warehouse" ColumnName="Warehouse" />
+          <ScalarProperty Name="ChargePerson" ColumnName="ChargePerson" />
+          <ScalarProperty Name="MakePerson" ColumnName="MakePerson" />
+          <ScalarProperty Name="ExaminationPerson" ColumnName="ExaminationPerson" />
+          <ScalarProperty Name="ExaminationDate" ColumnName="ExaminationDate" />
+          <ScalarProperty Name="BusinessType" ColumnName="BusinessType" />
+          <ScalarProperty Name="TotalCount" ColumnName="TotalCount" />
+          <ScalarProperty Name="TotalWeight" ColumnName="TotalWeight" />
+          <ScalarProperty Name="Remark" ColumnName="Remark" />
+          <ScalarProperty Name="LBCode" ColumnName="LBCode" />
+          <ScalarProperty Name="LBDate" ColumnName="LBDate" />
+          <ScalarProperty Name="LBFrom" ColumnName="LBFrom" />
+          <ScalarProperty Name="LBMoveType" ColumnName="LBMoveType" />
+          <ScalarProperty Name="LBRemark" ColumnName="LBRemark" />
+          <ScalarProperty Name="LBBackAddress" ColumnName="LBBackAddress" />
+          <ScalarProperty Name="LBContacts" ColumnName="LBContacts" />
+          <ScalarProperty Name="LBPhoneNumber" ColumnName="LBPhoneNumber" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Bill">
+      <EntityTypeMapping TypeName="WMSModel.Bill">
+        <MappingFragment StoreEntitySet="Bill">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="BillCode" ColumnName="BillCode" />
+          <ScalarProperty Name="BillState" ColumnName="BillState" />
+          <ScalarProperty Name="BillType" ColumnName="BillType" />
+          <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
+          <ScalarProperty Name="Warehouse" ColumnName="Warehouse" />
+          <ScalarProperty Name="ChargePerson" ColumnName="ChargePerson" />
+          <ScalarProperty Name="MakePerson" ColumnName="MakePerson" />
+          <ScalarProperty Name="ExaminationPerson" ColumnName="ExaminationPerson" />
+          <ScalarProperty Name="ExaminationDate" ColumnName="ExaminationDate" />
+          <ScalarProperty Name="BusinessType" ColumnName="BusinessType" />
+          <ScalarProperty Name="TotalCount" ColumnName="TotalCount" />
+          <ScalarProperty Name="TotalWeight" ColumnName="TotalWeight" />
+          <ScalarProperty Name="Remark" ColumnName="Remark" />
+          <ScalarProperty Name="LBCode" ColumnName="LBCode" />
+          <ScalarProperty Name="LBDate" ColumnName="LBDate" />
+          <ScalarProperty Name="LBFrom" ColumnName="LBFrom" />
+          <ScalarProperty Name="LBMoveType" ColumnName="LBMoveType" />
+          <ScalarProperty Name="LBRemark" ColumnName="LBRemark" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CheckBill">
+      <EntityTypeMapping TypeName="WMSModel.CheckBill">
+        <MappingFragment StoreEntitySet="CheckBill">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="BillCode" ColumnName="BillCode" />
+          <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
+          <ScalarProperty Name="Warehouse" ColumnName="Warehouse" />
+          <ScalarProperty Name="MakePerson" ColumnName="MakePerson" />
+          <ScalarProperty Name="ChargePerson" ColumnName="ChargePerson" />
+          <ScalarProperty Name="ExaminationPerson" ColumnName="ExaminationPerson" />
+          <ScalarProperty Name="ExaminationDate" ColumnName="ExaminationDate" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="DIYBill">
+      <EntityTypeMapping TypeName="WMSModel.DIYBill">
+        <MappingFragment StoreEntitySet="DIYBill">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="BillCode" ColumnName="BillCode" />
+          <ScalarProperty Name="BillState" ColumnName="BillState" />
+          <ScalarProperty Name="BillType" ColumnName="BillType" />
+          <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
+          <ScalarProperty Name="ChargePerson" ColumnName="ChargePerson" />
+          <ScalarProperty Name="MakePerson" ColumnName="MakePerson" />
+          <ScalarProperty Name="ExaminationPerson" ColumnName="ExaminationPerson" />
+          <ScalarProperty Name="ExaminationDate" ColumnName="ExaminationDate" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="GiveGoodsBill">
+      <EntityTypeMapping TypeName="WMSModel.GiveGoodsBill">
+        <MappingFragment StoreEntitySet="GiveGoodsBill">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="BillCode" ColumnName="BillCode" />
+          <ScalarProperty Name="BillState" ColumnName="BillState" />
+          <ScalarProperty Name="BillType" ColumnName="BillType" />
+          <ScalarProperty Name="TaskBillId" ColumnName="TaskBillId" />
+          <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
+          <ScalarProperty Name="Warehouse" ColumnName="Warehouse" />
+          <ScalarProperty Name="ChargePerson" ColumnName="ChargePerson" />
+          <ScalarProperty Name="MakePerson" ColumnName="MakePerson" />
+          <ScalarProperty Name="ExaminationPerson" ColumnName="ExaminationPerson" />
+          <ScalarProperty Name="ExaminationDate" ColumnName="ExaminationDate" />
+          <ScalarProperty Name="BusinessType" ColumnName="BusinessType" />
+          <ScalarProperty Name="TotalCount" ColumnName="TotalCount" />
+          <ScalarProperty Name="TotalWeight" ColumnName="TotalWeight" />
+          <ScalarProperty Name="Remark" ColumnName="Remark" />
+          <ScalarProperty Name="LBCustomerCode" ColumnName="LBCustomerCode" />
+          <ScalarProperty Name="LBCustomerName" ColumnName="LBCustomerName" />
+          <ScalarProperty Name="LBSendAddress" ColumnName="LBSendAddress" />
+          <ScalarProperty Name="LBContacts" ColumnName="LBContacts" />
+          <ScalarProperty Name="LBPhoneNumber" ColumnName="LBPhoneNumber" />
+          <ScalarProperty Name="LBPostCode" ColumnName="LBPostCode" />
+          <ScalarProperty Name="LBWayLine" ColumnName="LBWayLine" />
+          <ScalarProperty Name="LBCode" ColumnName="LBCode" />
+          <ScalarProperty Name="LBTaskCode" ColumnName="LBTaskCode" />
+          <ScalarProperty Name="LBGiveDate" ColumnName="LBGiveDate" />
+          <ScalarProperty Name="LBRemark" ColumnName="LBRemark" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="GoodsLocation">
+      <EntityTypeMapping TypeName="WMSModel.GoodsLocation">
+        <MappingFragment StoreEntitySet="GoodsLocation">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="WareHouseId" ColumnName="WareHouseId" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Inwarehouse">
+      <EntityTypeMapping TypeName="WMSModel.Inwarehouse">
+        <MappingFragment StoreEntitySet="Inwarehouse">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="MaterialCode" ColumnName="MaterialCode" />
+          <ScalarProperty Name="Batch" ColumnName="Batch" />
+          <ScalarProperty Name="LocationId" ColumnName="LocationId" />
+          <ScalarProperty Name="Count" ColumnName="Count" />
+          <ScalarProperty Name="Weight" ColumnName="Weight" />
+          <ScalarProperty Name="InwareHouseState" ColumnName="InwareHouseState" />
+          <ScalarProperty Name="InputDate" ColumnName="InputDate" />
+          <ScalarProperty Name="OutputDate" ColumnName="OutputDate" />
+          <ScalarProperty Name="Remark" ColumnName="Remark" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="LocationChangeBill">
+      <EntityTypeMapping TypeName="WMSModel.LocationChangeBill">
+        <MappingFragment StoreEntitySet="LocationChangeBill">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="BillCode" ColumnName="BillCode" />
+          <ScalarProperty Name="BillState" ColumnName="BillState" />
+          <ScalarProperty Name="BillType" ColumnName="BillType" />
+          <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
+          <ScalarProperty Name="Warehouse" ColumnName="Warehouse" />
+          <ScalarProperty Name="ChargePerson" ColumnName="ChargePerson" />
+          <ScalarProperty Name="MakePerson" ColumnName="MakePerson" />
+          <ScalarProperty Name="ExaminationPerson" ColumnName="ExaminationPerson" />
+          <ScalarProperty Name="ExaminationDate" ColumnName="ExaminationDate" />
+          <ScalarProperty Name="Remark" ColumnName="Remark" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="MaterialFile">
+      <EntityTypeMapping TypeName="WMSModel.MaterialFile">
+        <MappingFragment StoreEntitySet="MaterialFile">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="MaterialCode" ColumnName="MaterialCode" />
+          <ScalarProperty Name="MaterialClass" ColumnName="MaterialClass" />
+          <ScalarProperty Name="MaterialName" ColumnName="MaterialName" />
+          <ScalarProperty Name="Specifications" ColumnName="Specifications" />
+          <ScalarProperty Name="MaterialUnit" ColumnName="MaterialUnit" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="MenuA">
+      <EntityTypeMapping TypeName="WMSModel.MenuA">
+        <MappingFragment StoreEntitySet="MenuA">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="OrderNumber" ColumnName="OrderNumber" />
+          <ScalarProperty Name="Url" ColumnName="Url" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="MenuB">
+      <EntityTypeMapping TypeName="WMSModel.MenuB">
+        <MappingFragment StoreEntitySet="MenuB">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="OrderNumber" ColumnName="OrderNumber" />
+          <ScalarProperty Name="Url" ColumnName="Url" />
+          <ScalarProperty Name="MenuAId" ColumnName="MenuAId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="OtherInputBill">
+      <EntityTypeMapping TypeName="WMSModel.OtherInputBill">
+        <MappingFragment StoreEntitySet="OtherInputBill">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="BillCode" ColumnName="BillCode" />
+          <ScalarProperty Name="BillState" ColumnName="BillState" />
+          <ScalarProperty Name="BillType" ColumnName="BillType" />
+          <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
+          <ScalarProperty Name="Warehouse" ColumnName="Warehouse" />
+          <ScalarProperty Name="ChargePerson" ColumnName="ChargePerson" />
+          <ScalarProperty Name="MakePerson" ColumnName="MakePerson" />
+          <ScalarProperty Name="ExaminationPerson" ColumnName="ExaminationPerson" />
+          <ScalarProperty Name="ExaminationDate" ColumnName="ExaminationDate" />
+          <ScalarProperty Name="TotalCount" ColumnName="TotalCount" />
+          <ScalarProperty Name="TotalWeight" ColumnName="TotalWeight" />
+          <ScalarProperty Name="Remark" ColumnName="Remark" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="OtherOutputBill">
+      <EntityTypeMapping TypeName="WMSModel.OtherOutputBill">
+        <MappingFragment StoreEntitySet="OtherOutputBill">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="BillCode" ColumnName="BillCode" />
+          <ScalarProperty Name="BillState" ColumnName="BillState" />
+          <ScalarProperty Name="BillType" ColumnName="BillType" />
+          <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
+          <ScalarProperty Name="Warehouse" ColumnName="Warehouse" />
+          <ScalarProperty Name="ChargePerson" ColumnName="ChargePerson" />
+          <ScalarProperty Name="MakePerson" ColumnName="MakePerson" />
+          <ScalarProperty Name="ExaminationPerson" ColumnName="ExaminationPerson" />
+          <ScalarProperty Name="ExaminationDate" ColumnName="ExaminationDate" />
+          <ScalarProperty Name="TotalCount" ColumnName="TotalCount" />
+          <ScalarProperty Name="TotalWeight" ColumnName="TotalWeight" />
+          <ScalarProperty Name="Remark" ColumnName="Remark" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Record">
+      <EntityTypeMapping TypeName="WMSModel.Record">
+        <MappingFragment StoreEntitySet="Record">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="MainTableId" ColumnName="MainTableId" />
+          <ScalarProperty Name="GoodsLocationId" ColumnName="GoodsLocationId" />
+          <ScalarProperty Name="Batch" ColumnName="Batch" />
+          <ScalarProperty Name="Count" ColumnName="Count" />
+          <ScalarProperty Name="Weight" ColumnName="Weight" />
+          <ScalarProperty Name="InOutState" ColumnName="InOutState" />
+          <ScalarProperty Name="OperationDate" ColumnName="OperationDate" />
+          <ScalarProperty Name="Remark" ColumnName="Remark" />
+          <ScalarProperty Name="UserId" ColumnName="UserId" />
+          <ScalarProperty Name="OtherOutputBill_Id" ColumnName="OtherOutputBill_Id" />
+          <ScalarProperty Name="MaterialFile" ColumnName="MaterialFile" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TaskBill">
+      <EntityTypeMapping TypeName="WMSModel.TaskBill">
+        <MappingFragment StoreEntitySet="TaskBill">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="BillCode" ColumnName="BillCode" />
+          <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
+          <ScalarProperty Name="MakePerson" ColumnName="MakePerson" />
+          <ScalarProperty Name="ExaminationPerson" ColumnName="ExaminationPerson" />
+          <ScalarProperty Name="ExaminationDate" ColumnName="ExaminationDate" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="User">
+      <EntityTypeMapping TypeName="WMSModel.User">
+        <MappingFragment StoreEntitySet="User">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="WorkNumber" ColumnName="WorkNumber" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="UserName" ColumnName="UserName" />
+          <ScalarProperty Name="Pwd" ColumnName="Pwd" />
+          <ScalarProperty Name="CompanyId" ColumnName="CompanyId" />
+          <ScalarProperty Name="PostId" ColumnName="PostId" />
+          <ScalarProperty Name="JobId" ColumnName="JobId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Warehouse">
+      <EntityTypeMapping TypeName="WMSModel.Warehouse">
+        <MappingFragment StoreEntitySet="Warehouse">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

@@ -1,0 +1,285 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="DBStoreContainer" CdmEntityContainer="DBContainer">
+    <EntitySetMapping Name="TransferBill">
+      <EntityTypeMapping TypeName="IsTypeOf(DB.TransferBill)">
+        <MappingFragment StoreEntitySet="TransferBill">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="BillCode" ColumnName="BillCode" />
+          <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
+          <ScalarProperty Name="ChargePerson" ColumnName="ChargePerson" />
+          <ScalarProperty Name="ExaminePerson" ColumnName="ExaminePerson" />
+          <ScalarProperty Name="ExamineDate" ColumnName="ExamineDate" />
+          <ScalarProperty Name="MakePerson" ColumnName="MakePerson" />
+          <ScalarProperty Name="Warehouse" ColumnName="Warehouse" />
+          <ScalarProperty Name="InputType" ColumnName="InputType" />
+          <ScalarProperty Name="BusinessType" ColumnName="BusinessType" />
+          <ScalarProperty Name="Remark" ColumnName="Remark" />
+          <ScalarProperty Name="LBBillCode" ColumnName="LBBillCode" />
+          <ScalarProperty Name="LBBillDate" ColumnName="LBBillDate" />
+          <ScalarProperty Name="LBFrom" ColumnName="LBFrom" />
+          <ScalarProperty Name="LBMoveType" ColumnName="LBMoveType" />
+          <ScalarProperty Name="LBRemark" ColumnName="LBRemark" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="BackInput">
+      <EntityTypeMapping TypeName="IsTypeOf(DB.BackInput)">
+        <MappingFragment StoreEntitySet="BackInput">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="BillCode" ColumnName="BillCode" />
+          <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
+          <ScalarProperty Name="ChargePerson" ColumnName="ChargePerson" />
+          <ScalarProperty Name="ExaminePerson" ColumnName="ExaminePerson" />
+          <ScalarProperty Name="ExamineDate" ColumnName="ExamineDate" />
+          <ScalarProperty Name="MakePerson" ColumnName="MakePerson" />
+          <ScalarProperty Name="Warehouse" ColumnName="Warehouse" />
+          <ScalarProperty Name="OutputType" ColumnName="OutputType" />
+          <ScalarProperty Name="BusinessType" ColumnName="BusinessType" />
+          <ScalarProperty Name="Remark" ColumnName="Remark" />
+          <ScalarProperty Name="LBBillCode" ColumnName="LBBillCode" />
+          <ScalarProperty Name="LBBillDate" ColumnName="LBBillDate" />
+          <ScalarProperty Name="LBBackWarehouse" ColumnName="LBBackWarehouse" />
+          <ScalarProperty Name="LBMoveType" ColumnName="LBMoveType" />
+          <ScalarProperty Name="LBRemark" ColumnName="LBRemark" />
+          <ScalarProperty Name="LBBackAddress" ColumnName="LBBackAddress" />
+          <ScalarProperty Name="LBContacts" ColumnName="LBContacts" />
+          <ScalarProperty Name="LBPhone" ColumnName="LBPhone" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="OtherInput">
+      <EntityTypeMapping TypeName="IsTypeOf(DB.OtherInput)">
+        <MappingFragment StoreEntitySet="OtherInput">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="BillCode" ColumnName="BillCode" />
+          <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
+          <ScalarProperty Name="ChargePerson" ColumnName="ChargePerson" />
+          <ScalarProperty Name="ExaminePerson" ColumnName="ExaminePerson" />
+          <ScalarProperty Name="ExamineDate" ColumnName="ExamineDate" />
+          <ScalarProperty Name="MakePerson" ColumnName="MakePerson" />
+          <ScalarProperty Name="Warehouse" ColumnName="Warehouse" />
+          <ScalarProperty Name="InputType" ColumnName="InputType" />
+          <ScalarProperty Name="BusinessType" ColumnName="BusinessType" />
+          <ScalarProperty Name="Remark" ColumnName="Remark" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="DIYBill">
+      <EntityTypeMapping TypeName="IsTypeOf(DB.DIYBill)">
+        <MappingFragment StoreEntitySet="DIYBill">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="BillCode" ColumnName="BillCode" />
+          <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
+          <ScalarProperty Name="ChargePerson" ColumnName="ChargePerson" />
+          <ScalarProperty Name="ExaminePerson" ColumnName="ExaminePerson" />
+          <ScalarProperty Name="ExamineDate" ColumnName="ExamineDate" />
+          <ScalarProperty Name="MakePerson" ColumnName="MakePerson" />
+          <ScalarProperty Name="Remark" ColumnName="Remark" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="LocationChange">
+      <EntityTypeMapping TypeName="IsTypeOf(DB.LocationChange)">
+        <MappingFragment StoreEntitySet="LocationChange">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="BillCode" ColumnName="BillCode" />
+          <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
+          <ScalarProperty Name="ChargePerson" ColumnName="ChargePerson" />
+          <ScalarProperty Name="ExaminePerson" ColumnName="ExaminePerson" />
+          <ScalarProperty Name="ExamineDate" ColumnName="ExamineDate" />
+          <ScalarProperty Name="MakePerson" ColumnName="MakePerson" />
+          <ScalarProperty Name="Remark" ColumnName="Remark" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CheckBill">
+      <EntityTypeMapping TypeName="IsTypeOf(DB.CheckBill)">
+        <MappingFragment StoreEntitySet="CheckBill">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="BillCode" ColumnName="BillCode" />
+          <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
+          <ScalarProperty Name="Warehouse" ColumnName="Warehouse" />
+          <ScalarProperty Name="ChargePerson" ColumnName="ChargePerson" />
+          <ScalarProperty Name="ExaminePerson" ColumnName="ExaminePerson" />
+          <ScalarProperty Name="ExamineDate" ColumnName="ExamineDate" />
+          <ScalarProperty Name="MakePerson" ColumnName="MakePerson" />
+          <ScalarProperty Name="Remark" ColumnName="Remark" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="GiveBill">
+      <EntityTypeMapping TypeName="IsTypeOf(DB.GiveBill)">
+        <MappingFragment StoreEntitySet="GiveBill">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="BillCode" ColumnName="BillCode" />
+          <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
+          <ScalarProperty Name="ChargePerson" ColumnName="ChargePerson" />
+          <ScalarProperty Name="ExaminePerson" ColumnName="ExaminePerson" />
+          <ScalarProperty Name="ExamineDate" ColumnName="ExamineDate" />
+          <ScalarProperty Name="MakePerson" ColumnName="MakePerson" />
+          <ScalarProperty Name="Warehouse" ColumnName="Warehouse" />
+          <ScalarProperty Name="OutputType" ColumnName="OutputType" />
+          <ScalarProperty Name="BusinessType" ColumnName="BusinessType" />
+          <ScalarProperty Name="Remark" ColumnName="Remark" />
+          <ScalarProperty Name="LBBillCode" ColumnName="LBBillCode" />
+          <ScalarProperty Name="LBBillDate" ColumnName="LBBillDate" />
+          <ScalarProperty Name="LBTaskBillCode" ColumnName="LBTaskBillCode" />
+          <ScalarProperty Name="LBLine" ColumnName="LBLine" />
+          <ScalarProperty Name="LBContacts" ColumnName="LBContacts" />
+          <ScalarProperty Name="LBPhone" ColumnName="LBPhone" />
+          <ScalarProperty Name="LBMailCode" ColumnName="LBMailCode" />
+          <ScalarProperty Name="LBCustomerCode" ColumnName="LBCustomerCode" />
+          <ScalarProperty Name="LBCustomerName" ColumnName="LBCustomerName" />
+          <ScalarProperty Name="LBSendAddress" ColumnName="LBSendAddress" />
+          <ScalarProperty Name="LBRemark" ColumnName="LBRemark" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="BackOutput">
+      <EntityTypeMapping TypeName="IsTypeOf(DB.BackOutput)">
+        <MappingFragment StoreEntitySet="BackOutput">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="BillCode" ColumnName="BillCode" />
+          <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
+          <ScalarProperty Name="Warehouse" ColumnName="Warehouse" />
+          <ScalarProperty Name="InputType" ColumnName="InputType" />
+          <ScalarProperty Name="ChargePerson" ColumnName="ChargePerson" />
+          <ScalarProperty Name="ExaminePerson" ColumnName="ExaminePerson" />
+          <ScalarProperty Name="ExamineDate" ColumnName="ExamineDate" />
+          <ScalarProperty Name="MakePerson" ColumnName="MakePerson" />
+          <ScalarProperty Name="BusinessType" ColumnName="BusinessType" />
+          <ScalarProperty Name="Remark" ColumnName="Remark" />
+          <ScalarProperty Name="LBBillCode" ColumnName="LBBillCode" />
+          <ScalarProperty Name="LBGiveBillCode" ColumnName="LBGiveBillCode" />
+          <ScalarProperty Name="LBBillDate" ColumnName="LBBillDate" />
+          <ScalarProperty Name="LBCustomerCode" ColumnName="LBCustomerCode" />
+          <ScalarProperty Name="LBCustomerName" ColumnName="LBCustomerName" />
+          <ScalarProperty Name="LBSendAddress" ColumnName="LBSendAddress" />
+          <ScalarProperty Name="LBContacts" ColumnName="LBContacts" />
+          <ScalarProperty Name="LBPhone" ColumnName="LBPhone" />
+          <ScalarProperty Name="LBMailCode" ColumnName="LBMailCode" />
+          <ScalarProperty Name="LBReson" ColumnName="LBReson" />
+          <ScalarProperty Name="LBRemark" ColumnName="LBRemark" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="OtherOutput">
+      <EntityTypeMapping TypeName="IsTypeOf(DB.OtherOutput)">
+        <MappingFragment StoreEntitySet="OtherOutput">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="BillCode" ColumnName="BillCode" />
+          <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
+          <ScalarProperty Name="Warehouse" ColumnName="Warehouse" />
+          <ScalarProperty Name="OutputType" ColumnName="OutputType" />
+          <ScalarProperty Name="MakePerson" ColumnName="MakePerson" />
+          <ScalarProperty Name="ExamineDate" ColumnName="ExamineDate" />
+          <ScalarProperty Name="ExaminePerson" ColumnName="ExaminePerson" />
+          <ScalarProperty Name="ChargePerson" ColumnName="ChargePerson" />
+          <ScalarProperty Name="BusinessType" ColumnName="BusinessType" />
+          <ScalarProperty Name="Remark" ColumnName="Remark" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Record">
+      <EntityTypeMapping TypeName="IsTypeOf(DB.Record)">
+        <MappingFragment StoreEntitySet="Record">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="MainTableId" ColumnName="MainTableId" />
+          <ScalarProperty Name="ItemCode" ColumnName="ItemCode" />
+          <ScalarProperty Name="ItemLine" ColumnName="ItemLine" />
+          <ScalarProperty Name="ItemName" ColumnName="ItemName" />
+          <ScalarProperty Name="ItemSpecifications" ColumnName="ItemSpecifications" />
+          <ScalarProperty Name="ItemLocation" ColumnName="ItemLocation" />
+          <ScalarProperty Name="ItemBatch" ColumnName="ItemBatch" />
+          <ScalarProperty Name="ItemUnit" ColumnName="ItemUnit" />
+          <ScalarProperty Name="Count" ColumnName="Count" />
+          <ScalarProperty Name="Weight" ColumnName="Weight" />
+          <ScalarProperty Name="ReceiveCount" ColumnName="ReceiveCount" />
+          <ScalarProperty Name="Remark" ColumnName="Remark" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="MenuA">
+      <EntityTypeMapping TypeName="IsTypeOf(DB.MenuA)">
+        <MappingFragment StoreEntitySet="MenuA">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="OrderNumber" ColumnName="OrderNumber" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="MenuB">
+      <EntityTypeMapping TypeName="IsTypeOf(DB.MenuB)">
+        <MappingFragment StoreEntitySet="MenuB">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="MenuAId" ColumnName="MenuAId" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Url" ColumnName="Url" />
+          <ScalarProperty Name="OrderNumber" ColumnName="OrderNumber" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="InWarehouse">
+      <EntityTypeMapping TypeName="IsTypeOf(DB.InWarehouse)">
+        <MappingFragment StoreEntitySet="InWarehouse">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="ItemCode" ColumnName="ItemCode" />
+          <ScalarProperty Name="ItemLine" ColumnName="ItemLine" />
+          <ScalarProperty Name="ItemName" ColumnName="ItemName" />
+          <ScalarProperty Name="ItemSpecifications" ColumnName="ItemSpecifications" />
+          <ScalarProperty Name="ItemLocation" ColumnName="ItemLocation" />
+          <ScalarProperty Name="ItemBatch" ColumnName="ItemBatch" />
+          <ScalarProperty Name="ItemUnit" ColumnName="ItemUnit" />
+          <ScalarProperty Name="Count" ColumnName="Count" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Location">
+      <EntityTypeMapping TypeName="IsTypeOf(DB.Location)">
+        <MappingFragment StoreEntitySet="Location">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="WarehouseId" ColumnName="WarehouseId" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Remark" ColumnName="Remark" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Warehouse">
+      <EntityTypeMapping TypeName="IsTypeOf(DB.Warehouse)">
+        <MappingFragment StoreEntitySet="Warehouse">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Remark" ColumnName="Remark" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TaskBill">
+      <EntityTypeMapping TypeName="IsTypeOf(DB.TaskBill)">
+        <MappingFragment StoreEntitySet="TaskBill">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="BillCode" ColumnName="BillCode" />
+          <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
+          <ScalarProperty Name="MakePerson" ColumnName="MakePerson" />
+          <ScalarProperty Name="ExamineDate" ColumnName="ExamineDate" />
+          <ScalarProperty Name="ExaminePerson" ColumnName="ExaminePerson" />
+          <ScalarProperty Name="ChargePerson" ColumnName="ChargePerson" />
+          <ScalarProperty Name="Remark" ColumnName="Remark" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="GoodItem">
+      <EntityTypeMapping TypeName="IsTypeOf(DB.GoodItem)">
+        <MappingFragment StoreEntitySet="GoodItem">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="ItemCode" ColumnName="ItemCode" />
+          <ScalarProperty Name="ItemLine" ColumnName="ItemLine" />
+          <ScalarProperty Name="ItemName" ColumnName="ItemName" />
+          <ScalarProperty Name="ItemSpecifications" ColumnName="ItemSpecifications" />
+          <ScalarProperty Name="ItemLocation" ColumnName="ItemLocation" />
+          <ScalarProperty Name="ItemUnit" ColumnName="ItemUnit" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

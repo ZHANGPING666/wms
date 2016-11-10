@@ -1,0 +1,13 @@
+C:\Users\Administrator\Desktop\LHYS.WMS\IDAL\bin\Debug\IDAL.dll
+C:\Users\Administrator\Desktop\LHYS.WMS\IDAL\bin\Debug\IDAL.pdb
+C:\Users\Administrator\Desktop\LHYS.WMS\IDAL\bin\Debug\DBModel.dll
+C:\Users\Administrator\Desktop\LHYS.WMS\IDAL\bin\Debug\EntityFramework.dll
+C:\Users\Administrator\Desktop\LHYS.WMS\IDAL\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Administrator\Desktop\LHYS.WMS\IDAL\bin\Debug\DBModel.pdb
+C:\Users\Administrator\Desktop\LHYS.WMS\IDAL\bin\Debug\EntityFramework.xml
+C:\Users\Administrator\Desktop\LHYS.WMS\IDAL\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Administrator\Desktop\LHYS.WMS\IDAL\bin\Debug\zh-Hans\EntityFramework.resources.dll
+C:\Users\Administrator\Desktop\LHYS.WMS\IDAL\bin\Debug\zh-Hans\EntityFramework.SqlServer.resources.dll
+C:\Users\Administrator\Desktop\LHYS.WMS\IDAL\obj\Debug\IDAL.csprojResolveAssemblyReference.cache
+C:\Users\Administrator\Desktop\LHYS.WMS\IDAL\obj\Debug\IDAL.dll
+C:\Users\Administrator\Desktop\LHYS.WMS\IDAL\obj\Debug\IDAL.pdb

@@ -1,0 +1,16 @@
+F:\sourcecode\LHYSWMS\LHYS.WMS\Common\bin\Debug\Common.dll
+F:\sourcecode\LHYSWMS\LHYS.WMS\Common\bin\Debug\Common.pdb
+F:\sourcecode\LHYSWMS\LHYS.WMS\Common\obj\Debug\Common.dll
+F:\sourcecode\LHYSWMS\LHYS.WMS\Common\obj\Debug\Common.pdb
+C:\Users\yue\Desktop\LHYS.WMS\Common\bin\Debug\Common.dll
+C:\Users\yue\Desktop\LHYS.WMS\Common\bin\Debug\Common.pdb
+C:\Users\yue\Desktop\LHYS.WMS\Common\obj\Debug\Common.dll
+C:\Users\yue\Desktop\LHYS.WMS\Common\obj\Debug\Common.pdb
+D:\新建文件夹\LHYS.WMS\Common\bin\Debug\Common.dll
+D:\新建文件夹\LHYS.WMS\Common\bin\Debug\Common.pdb
+D:\新建文件夹\LHYS.WMS\Common\obj\Debug\Common.dll
+D:\新建文件夹\LHYS.WMS\Common\obj\Debug\Common.pdb
+C:\Users\Administrator\Desktop\LHYS.WMS\Common\bin\Debug\Common.dll
+C:\Users\Administrator\Desktop\LHYS.WMS\Common\bin\Debug\Common.pdb
+C:\Users\Administrator\Desktop\LHYS.WMS\Common\obj\Debug\Common.dll
+C:\Users\Administrator\Desktop\LHYS.WMS\Common\obj\Debug\Common.pdb

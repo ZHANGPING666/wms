@@ -1,0 +1,472 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema xmlns="http://schemas.microsoft.com/ado/2009/11/edm" xmlns:cg="http://schemas.microsoft.com/ado/2006/04/codegeneration" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" Namespace="DB" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" annotation:UseStrongSpatialTypes="false">
+  <EntityContainer Name="DBContainer" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="TransferBill" EntityType="DB.TransferBill" />
+    <EntitySet Name="BackInput" EntityType="DB.BackInput" />
+    <EntitySet Name="OtherInput" EntityType="DB.OtherInput" />
+    <EntitySet Name="DIYBill" EntityType="DB.DIYBill" />
+    <EntitySet Name="LocationChange" EntityType="DB.LocationChange" />
+    <EntitySet Name="CheckBill" EntityType="DB.CheckBill" />
+    <EntitySet Name="GiveBill" EntityType="DB.GiveBill" />
+    <EntitySet Name="BackOutput" EntityType="DB.BackOutput" />
+    <EntitySet Name="OtherOutput" EntityType="DB.OtherOutput" />
+    <EntitySet Name="Record" EntityType="DB.Record" />
+    <AssociationSet Name="TransferBillRecord" Association="DB.TransferBillRecord">
+      <End Role="TransferBill" EntitySet="TransferBill" />
+      <End Role="Record" EntitySet="Record" />
+    </AssociationSet>
+    <AssociationSet Name="BackInputRecord" Association="DB.BackInputRecord">
+      <End Role="BackInput" EntitySet="BackInput" />
+      <End Role="Record" EntitySet="Record" />
+    </AssociationSet>
+    <AssociationSet Name="OtherInputRecord" Association="DB.OtherInputRecord">
+      <End Role="OtherInput" EntitySet="OtherInput" />
+      <End Role="Record" EntitySet="Record" />
+    </AssociationSet>
+    <AssociationSet Name="DIYBillRecord" Association="DB.DIYBillRecord">
+      <End Role="DIYBill" EntitySet="DIYBill" />
+      <End Role="Record" EntitySet="Record" />
+    </AssociationSet>
+    <AssociationSet Name="LocationChangeRecord" Association="DB.LocationChangeRecord">
+      <End Role="LocationChange" EntitySet="LocationChange" />
+      <End Role="Record" EntitySet="Record" />
+    </AssociationSet>
+    <AssociationSet Name="CheckBillRecord" Association="DB.CheckBillRecord">
+      <End Role="CheckBill" EntitySet="CheckBill" />
+      <End Role="Record" EntitySet="Record" />
+    </AssociationSet>
+    <AssociationSet Name="GiveBillRecord" Association="DB.GiveBillRecord">
+      <End Role="GiveBill" EntitySet="GiveBill" />
+      <End Role="Record" EntitySet="Record" />
+    </AssociationSet>
+    <AssociationSet Name="BackOutputRecord" Association="DB.BackOutputRecord">
+      <End Role="BackOutput" EntitySet="BackOutput" />
+      <End Role="Record" EntitySet="Record" />
+    </AssociationSet>
+    <AssociationSet Name="OtherOutputRecord" Association="DB.OtherOutputRecord">
+      <End Role="OtherOutput" EntitySet="OtherOutput" />
+      <End Role="Record" EntitySet="Record" />
+    </AssociationSet>
+    <EntitySet Name="MenuA" EntityType="DB.MenuA" />
+    <EntitySet Name="MenuB" EntityType="DB.MenuB" />
+    <AssociationSet Name="MenuAMenuB" Association="DB.MenuAMenuB">
+      <End Role="MenuA" EntitySet="MenuA" />
+      <End Role="MenuB" EntitySet="MenuB" />
+    </AssociationSet>
+    <EntitySet Name="InWarehouse" EntityType="DB.InWarehouse" />
+    <EntitySet Name="Location" EntityType="DB.Location" />
+    <EntitySet Name="Warehouse" EntityType="DB.Warehouse" />
+    <AssociationSet Name="WarehouseLocation" Association="DB.WarehouseLocation">
+      <End Role="Warehouse" EntitySet="Warehouse" />
+      <End Role="Location" EntitySet="Location" />
+    </AssociationSet>
+    <EntitySet Name="TaskBill" EntityType="DB.TaskBill" />
+    <EntitySet Name="GoodItem" EntityType="DB.GoodItem" />
+  </EntityContainer>
+  <EntityType Name="TransferBill">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Guid" Nullable="false" annotation:StoreGeneratedPattern="None" />
+    <NavigationProperty Name="Record" Relationship="DB.TransferBillRecord" FromRole="TransferBill" ToRole="Record" />
+    <Property Name="BillCode" Type="String" Nullable="true" MaxLength="50" />
+    <Property Name="CreateDate" Type="DateTime" Nullable="true" />
+    <Property Name="ChargePerson" Type="String" Nullable="true" MaxLength="50" />
+    <Property Name="ExaminePerson" Type="String" Nullable="true" MaxLength="50" />
+    <Property Name="ExamineDate" Type="DateTime" Nullable="true" />
+    <Property Name="MakePerson" Type="String" Nullable="true" MaxLength="50" />
+    <Property Name="Warehouse" Type="String" Nullable="true" MaxLength="100" />
+    <Property Name="InputType" Type="String" Nullable="true" MaxLength="100" />
+    <Property Name="BusinessType" Type="String" Nullable="true" MaxLength="100" />
+    <Property Name="Remark" Type="String" Nullable="true" MaxLength="1000" />
+    <Property Name="LBBillCode" Type="String" Nullable="true" MaxLength="100" />
+    <Property Name="LBBillDate" Type="DateTime" Nullable="true" />
+    <Property Name="LBFrom" Type="String" Nullable="true" MaxLength="100" />
+    <Property Name="LBMoveType" Type="String" Nullable="true" MaxLength="100" />
+    <Property Name="LBRemark" Type="String" Nullable="true" MaxLength="500" />
+  </EntityType>
+  <EntityType Name="BackInput">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Guid" Nullable="false" annotation:StoreGeneratedPattern="None" />
+    <NavigationProperty Name="Record" Relationship="DB.BackInputRecord" FromRole="BackInput" ToRole="Record" />
+    <Property Name="BillCode" Type="String" Nullable="true" MaxLength="50" />
+    <Property Name="CreateDate" Type="DateTime" Nullable="true" />
+    <Property Name="ChargePerson" Type="String" Nullable="true" MaxLength="50" />
+    <Property Name="ExaminePerson" Type="String" Nullable="true" MaxLength="50" />
+    <Property Name="ExamineDate" Type="DateTime" Nullable="true" />
+    <Property Name="MakePerson" Type="String" Nullable="true" MaxLength="50" />
+    <Property Name="Warehouse" Type="String" Nullable="true" MaxLength="100" />
+    <Property Name="OutputType" Type="String" Nullable="true" MaxLength="100" />
+    <Property Name="BusinessType" Type="String" Nullable="true" MaxLength="100" />
+    <Property Name="Remark" Type="String" Nullable="true" MaxLength="1000" />
+    <Property Name="LBBillCode" Type="String" Nullable="true" MaxLength="100" />
+    <Property Name="LBBillDate" Type="DateTime" Nullable="true" />
+    <Property Name="LBBackWarehouse" Type="String" Nullable="true" MaxLength="100" />
+    <Property Name="LBMoveType" Type="String" Nullable="true" MaxLength="100" />
+    <Property Name="LBRemark" Type="String" Nullable="true" MaxLength="500" />
+    <Property Name="LBBackAddress" Type="String" Nullable="true" MaxLength="500" />
+    <Property Name="LBContacts" Type="String" Nullable="true" MaxLength="100" />
+    <Property Name="LBPhone" Type="String" Nullable="true" MaxLength="100" />
+  </EntityType>
+  <EntityType Name="OtherInput">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Guid" Nullable="false" annotation:StoreGeneratedPattern="None" />
+    <NavigationProperty Name="Record" Relationship="DB.OtherInputRecord" FromRole="OtherInput" ToRole="Record" />
+    <Property Name="BillCode" Type="String" Nullable="true" MaxLength="50" />
+    <Property Name="CreateDate" Type="DateTime" Nullable="true" />
+    <Property Name="ChargePerson" Type="String" Nullable="true" MaxLength="50" />
+    <Property Name="ExaminePerson" Type="String" Nullable="true" MaxLength="50" />
+    <Property Name="ExamineDate" Type="DateTime" Nullable="true" />
+    <Property Name="MakePerson" Type="String" Nullable="true" MaxLength="50" />
+    <Property Name="Warehouse" Type="String" Nullable="true" MaxLength="100" />
+    <Property Name="InputType" Type="String" Nullable="true" MaxLength="100" />
+    <Property Name="BusinessType" Type="String" Nullable="true" MaxLength="100" />
+    <Property Name="Remark" Type="String" Nullable="true" MaxLength="1000" />
+  </EntityType>
+  <EntityType Name="DIYBill">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Guid" Nullable="false" annotation:StoreGeneratedPattern="None" />
+    <NavigationProperty Name="Record" Relationship="DB.DIYBillRecord" FromRole="DIYBill" ToRole="Record" />
+    <Property Name="BillCode" Type="String" Nullable="true" MaxLength="50" />
+    <Property Name="CreateDate" Type="DateTime" Nullable="true" />
+    <Property Name="ChargePerson" Type="String" Nullable="true" MaxLength="50" />
+    <Property Name="ExaminePerson" Type="String" Nullable="true" MaxLength="50" />
+    <Property Name="ExamineDate" Type="DateTime" Nullable="true" />
+    <Property Name="MakePerson" Type="String" Nullable="true" MaxLength="50" />
+    <Property Name="Remark" Type="String" Nullable="true" MaxLength="1000" />
+  </EntityType>
+  <EntityType Name="LocationChange">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Guid" Nullable="false" annotation:StoreGeneratedPattern="None" />
+    <NavigationProperty Name="Record" Relationship="DB.LocationChangeRecord" FromRole="LocationChange" ToRole="Record" />
+    <Property Name="BillCode" Type="String" Nullable="true" MaxLength="50" />
+    <Property Name="CreateDate" Type="DateTime" Nullable="true" />
+    <Property Name="ChargePerson" Type="String" Nullable="true" MaxLength="50" />
+    <Property Name="ExaminePerson" Type="String" Nullable="true" MaxLength="50" />
+    <Property Name="ExamineDate" Type="DateTime" Nullable="true" />
+    <Property Name="MakePerson" Type="String" Nullable="true" MaxLength="50" />
+    <Property Name="Remark" Type="String" Nullable="true" MaxLength="1000" />
+  </EntityType>
+  <EntityType Name="CheckBill">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Guid" Nullable="false" annotation:StoreGeneratedPattern="None" />
+    <NavigationProperty Name="Record" Relationship="DB.CheckBillRecord" FromRole="CheckBill" ToRole="Record" />
+    <Property Name="BillCode" Type="String" Nullable="true" MaxLength="50" />
+    <Property Name="CreateDate" Type="DateTime" Nullable="true" />
+    <Property Name="Warehouse" Type="String" Nullable="true" MaxLength="100" />
+    <Property Name="ChargePerson" Type="String" Nullable="true" MaxLength="50" />
+    <Property Name="ExaminePerson" Type="String" Nullable="true" MaxLength="50" />
+    <Property Name="ExamineDate" Type="DateTime" Nullable="true" />
+    <Property Name="MakePerson" Type="String" Nullable="true" MaxLength="50" />
+    <Property Name="Remark" Type="String" Nullable="true" MaxLength="1000" />
+  </EntityType>
+  <EntityType Name="GiveBill">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Guid" Nullable="false" annotation:StoreGeneratedPattern="None" />
+    <NavigationProperty Name="Record" Relationship="DB.GiveBillRecord" FromRole="GiveBill" ToRole="Record" />
+    <Property Name="BillCode" Type="String" Nullable="true" MaxLength="50" />
+    <Property Name="CreateDate" Type="DateTime" Nullable="true" />
+    <Property Name="ChargePerson" Type="String" Nullable="true" MaxLength="50" />
+    <Property Name="ExaminePerson" Type="String" Nullable="true" MaxLength="50" />
+    <Property Name="ExamineDate" Type="DateTime" Nullable="true" />
+    <Property Name="MakePerson" Type="String" Nullable="true" MaxLength="50" />
+    <Property Name="Warehouse" Type="String" Nullable="true" MaxLength="100" />
+    <Property Name="OutputType" Type="String" Nullable="true" MaxLength="100" />
+    <Property Name="BusinessType" Type="String" Nullable="true" MaxLength="100" />
+    <Property Name="Remark" Type="String" Nullable="true" MaxLength="1000" />
+    <Property Name="LBBillCode" Type="String" Nullable="true" MaxLength="100" />
+    <Property Name="LBBillDate" Type="DateTime" Nullable="true" />
+    <Property Name="LBTaskBillCode" Type="String" Nullable="true" MaxLength="100" />
+    <Property Name="LBLine" Type="String" Nullable="true" MaxLength="200" />
+    <Property Name="LBContacts" Type="String" Nullable="true" MaxLength="100" />
+    <Property Name="LBPhone" Type="String" Nullable="true" MaxLength="100" />
+    <Property Name="LBMailCode" Type="String" Nullable="true" MaxLength="100" />
+    <Property Name="LBCustomerCode" Type="String" Nullable="true" MaxLength="100" />
+    <Property Name="LBCustomerName" Type="String" Nullable="true" MaxLength="500" />
+    <Property Name="LBSendAddress" Type="String" Nullable="true" MaxLength="100" />
+    <Property Name="LBRemark" Type="String" Nullable="true" MaxLength="500" />
+  </EntityType>
+  <EntityType Name="BackOutput">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Guid" Nullable="false" annotation:StoreGeneratedPattern="None" />
+    <NavigationProperty Name="Record" Relationship="DB.BackOutputRecord" FromRole="BackOutput" ToRole="Record" />
+    <Property Name="BillCode" Type="String" Nullable="true" MaxLength="50" />
+    <Property Name="CreateDate" Type="DateTime" Nullable="true" />
+    <Property Name="Warehouse" Type="String" Nullable="true" MaxLength="100" />
+    <Property Name="InputType" Type="String" Nullable="true" MaxLength="100" />
+    <Property Name="ChargePerson" Type="String" Nullable="true" MaxLength="50" />
+    <Property Name="ExaminePerson" Type="String" Nullable="true" MaxLength="50" />
+    <Property Name="ExamineDate" Type="DateTime" Nullable="true" />
+    <Property Name="MakePerson" Type="String" Nullable="true" MaxLength="50" />
+    <Property Name="BusinessType" Type="String" Nullable="true" MaxLength="100" />
+    <Property Name="Remark" Type="String" Nullable="true" MaxLength="1000" />
+    <Property Name="LBBillCode" Type="String" Nullable="true" MaxLength="100" />
+    <Property Name="LBGiveBillCode" Type="String" Nullable="true" MaxLength="100" />
+    <Property Name="LBBillDate" Type="DateTime" Nullable="true" />
+    <Property Name="LBCustomerCode" Type="String" Nullable="true" MaxLength="100" />
+    <Property Name="LBCustomerName" Type="String" Nullable="true" MaxLength="500" />
+    <Property Name="LBSendAddress" Type="String" Nullable="true" MaxLength="100" />
+    <Property Name="LBContacts" Type="String" Nullable="true" MaxLength="100" />
+    <Property Name="LBPhone" Type="String" Nullable="true" MaxLength="100" />
+    <Property Name="LBMailCode" Type="String" Nullable="true" MaxLength="100" />
+    <Property Name="LBReson" Type="String" Nullable="true" MaxLength="500" />
+    <Property Name="LBRemark" Type="String" Nullable="true" MaxLength="500" />
+  </EntityType>
+  <EntityType Name="OtherOutput">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Guid" Nullable="false" annotation:StoreGeneratedPattern="None" />
+    <NavigationProperty Name="Record" Relationship="DB.OtherOutputRecord" FromRole="OtherOutput" ToRole="Record" />
+    <Property Name="BillCode" Type="String" Nullable="true" MaxLength="50" />
+    <Property Name="CreateDate" Type="DateTime" Nullable="true" />
+    <Property Name="Warehouse" Type="String" Nullable="true" MaxLength="100" />
+    <Property Name="OutputType" Type="String" Nullable="true" MaxLength="100" />
+    <Property Name="MakePerson" Type="String" Nullable="true" MaxLength="50" />
+    <Property Name="ExamineDate" Type="DateTime" Nullable="true" />
+    <Property Name="ExaminePerson" Type="String" Nullable="true" MaxLength="50" />
+    <Property Name="ChargePerson" Type="String" Nullable="true" MaxLength="50" />
+    <Property Name="BusinessType" Type="String" Nullable="true" MaxLength="100" />
+    <Property Name="Remark" Type="String" Nullable="true" MaxLength="1000" />
+  </EntityType>
+  <EntityType Name="Record">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Guid" Nullable="false" annotation:StoreGeneratedPattern="None" />
+    <Property Name="MainTableId" Type="Guid" Nullable="true" />
+    <Property Name="ItemCode" Type="String" Nullable="true" MaxLength="100" />
+    <Property Name="ItemLine" Type="String" Nullable="true" MaxLength="100" />
+    <Property Name="ItemName" Type="String" Nullable="true" MaxLength="100" />
+    <Property Name="ItemSpecifications" Type="String" Nullable="true" MaxLength="100" />
+    <Property Name="ItemLocation" Type="String" Nullable="true" MaxLength="100" />
+    <Property Name="ItemBatch" Type="String" Nullable="true" MaxLength="100" />
+    <Property Name="ItemUnit" Type="String" Nullable="true" MaxLength="100" />
+    <Property Name="Count" Type="Double" Nullable="true" />
+    <Property Name="Weight" Type="Double" Nullable="true" />
+    <Property Name="ReceiveCount" Type="Double" Nullable="true" />
+    <Property Name="Remark" Type="String" Nullable="true" MaxLength="500" />
+  </EntityType>
+  <Association Name="TransferBillRecord">
+    <End Type="DB.TransferBill" Role="TransferBill" Multiplicity="0..1" />
+    <End Type="DB.Record" Role="Record" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TransferBill">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Record">
+        <PropertyRef Name="MainTableId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="BackInputRecord">
+    <End Type="DB.BackInput" Role="BackInput" Multiplicity="0..1" />
+    <End Type="DB.Record" Role="Record" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="BackInput">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Record">
+        <PropertyRef Name="MainTableId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="OtherInputRecord">
+    <End Type="DB.OtherInput" Role="OtherInput" Multiplicity="0..1" />
+    <End Type="DB.Record" Role="Record" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="OtherInput">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Record">
+        <PropertyRef Name="MainTableId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="DIYBillRecord">
+    <End Type="DB.DIYBill" Role="DIYBill" Multiplicity="0..1" />
+    <End Type="DB.Record" Role="Record" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="DIYBill">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Record">
+        <PropertyRef Name="MainTableId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="LocationChangeRecord">
+    <End Type="DB.LocationChange" Role="LocationChange" Multiplicity="0..1" />
+    <End Type="DB.Record" Role="Record" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="LocationChange">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Record">
+        <PropertyRef Name="MainTableId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="CheckBillRecord">
+    <End Type="DB.CheckBill" Role="CheckBill" Multiplicity="0..1" />
+    <End Type="DB.Record" Role="Record" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CheckBill">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Record">
+        <PropertyRef Name="MainTableId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="GiveBillRecord">
+    <End Type="DB.GiveBill" Role="GiveBill" Multiplicity="0..1" />
+    <End Type="DB.Record" Role="Record" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="GiveBill">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Record">
+        <PropertyRef Name="MainTableId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="BackOutputRecord">
+    <End Type="DB.BackOutput" Role="BackOutput" Multiplicity="0..1" />
+    <End Type="DB.Record" Role="Record" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="BackOutput">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Record">
+        <PropertyRef Name="MainTableId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="OtherOutputRecord">
+    <End Type="DB.OtherOutput" Role="OtherOutput" Multiplicity="0..1" />
+    <End Type="DB.Record" Role="Record" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="OtherOutput">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Record">
+        <PropertyRef Name="MainTableId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityType Name="MenuA">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <NavigationProperty Name="MenuB" Relationship="DB.MenuAMenuB" FromRole="MenuA" ToRole="MenuB" />
+    <Property Name="Name" Type="String" Nullable="true" MaxLength="100" />
+    <Property Name="OrderNumber" Type="Int32" Nullable="true" />
+  </EntityType>
+  <EntityType Name="MenuB">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="MenuAId" Type="Int32" Nullable="false" />
+    <Property Name="Name" Type="String" Nullable="true" MaxLength="100" />
+    <Property Name="Url" Type="String" Nullable="true" MaxLength="500" />
+    <Property Name="OrderNumber" Type="Int32" Nullable="true" />
+  </EntityType>
+  <Association Name="MenuAMenuB">
+    <End Type="DB.MenuA" Role="MenuA" Multiplicity="1" />
+    <End Type="DB.MenuB" Role="MenuB" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="MenuA">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="MenuB">
+        <PropertyRef Name="MenuAId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityType Name="InWarehouse">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Guid" Nullable="false" annotation:StoreGeneratedPattern="None" />
+    <Property Name="ItemCode" Type="String" Nullable="false" />
+    <Property Name="ItemLine" Type="String" Nullable="false" />
+    <Property Name="ItemName" Type="String" Nullable="false" />
+    <Property Name="ItemSpecifications" Type="String" Nullable="false" />
+    <Property Name="ItemLocation" Type="String" Nullable="false" />
+    <Property Name="ItemBatch" Type="String" Nullable="true" MaxLength="100" />
+    <Property Name="ItemUnit" Type="String" Nullable="true" MaxLength="100" />
+    <Property Name="Count" Type="Double" Nullable="true" />
+  </EntityType>
+  <EntityType Name="Location">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="WarehouseId" Type="Int32" Nullable="false" />
+    <Property Name="Name" Type="String" Nullable="true" MaxLength="100" />
+    <Property Name="Remark" Type="String" Nullable="true" MaxLength="500" />
+  </EntityType>
+  <EntityType Name="Warehouse">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <NavigationProperty Name="Location" Relationship="DB.WarehouseLocation" FromRole="Warehouse" ToRole="Location" />
+    <Property Name="Name" Type="String" Nullable="true" MaxLength="100" />
+    <Property Name="Remark" Type="String" Nullable="true" MaxLength="500" />
+  </EntityType>
+  <Association Name="WarehouseLocation">
+    <End Type="DB.Warehouse" Role="Warehouse" Multiplicity="1" />
+    <End Type="DB.Location" Role="Location" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Warehouse">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Location">
+        <PropertyRef Name="WarehouseId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityType Name="TaskBill">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Guid" Nullable="false" annotation:StoreGeneratedPattern="None" />
+    <Property Name="BillCode" Type="String" Nullable="true" MaxLength="50" />
+    <Property Name="CreateDate" Type="DateTime" Nullable="true" />
+    <Property Name="MakePerson" Type="String" Nullable="true" MaxLength="50" />
+    <Property Name="ExamineDate" Type="DateTime" Nullable="true" />
+    <Property Name="ExaminePerson" Type="String" Nullable="true" MaxLength="50" />
+    <Property Name="ChargePerson" Type="String" Nullable="true" MaxLength="50" />
+    <Property Name="Remark" Type="String" Nullable="true" MaxLength="1000" />
+  </EntityType>
+  <EntityType Name="GoodItem">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="ItemCode" Type="String" Nullable="true" MaxLength="100" />
+    <Property Name="ItemLine" Type="String" Nullable="true" MaxLength="100" />
+    <Property Name="ItemName" Type="String" Nullable="true" MaxLength="100" />
+    <Property Name="ItemSpecifications" Type="String" Nullable="true" MaxLength="100" />
+    <Property Name="ItemLocation" Type="String" Nullable="true" MaxLength="100" />
+    <Property Name="ItemUnit" Type="String" Nullable="true" MaxLength="100" />
+  </EntityType>
+</Schema>
